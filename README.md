@@ -9,7 +9,7 @@ These templates are useful when building,testing and publishing API calls, while
 
 ## Import into POSTMAN
 1. Github | Copy all of the raw code for [WaaS API v4.postman_collection-1.json](https://raw.githubusercontent.com/ntrifiletti/waas-postman/main/WaaS%20API%20v4.postman_collection-1.json) into your clipboard.
-2. Postman | Open Postman and Click "Import" in the Postman Workspace of your choosing.
+2. Postman | Open Postman and Click "Import" in the Postman Workspace of your choosing. Paste the contents of your clipboard and Accept.
 3. Postman | Navigate to the Overview and change your Authorization type and Variables to match your Waas API environment.
 4. Postman | Click Send to initiate API calls.
 5. Postman |Verify the Response Body and Status Codes for succesful transactions. 
