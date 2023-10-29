@@ -3,8 +3,7 @@
 		"_postman_id": "0f46f37a-7f91-4948-b2ba-dcb84e2ae7e0",
 		"name": "WaaS API v4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "10157885",
-		"_collection_link": "https://gold-flare-251534.postman.co/workspace/Team-Workspace~e4cfa011-3f55-454c-8413-6ae92c839820/collection/10157885-0f46f37a-7f91-4948-b2ba-dcb84e2ae7e0?action=share&source=collection_link&creator=10157885"
+		"_exporter_id": "10157885"
 	},
 	"item": [
 		{
@@ -16,7 +15,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.example.com/basic_security/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -28,7 +27,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"www.example.com",
+								"{{appName}}",
 								"basic_security",
 								""
 							]
@@ -51,7 +50,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.example.com/basic_security/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -63,7 +62,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"www.example.com",
+								"{{appName}}",
 								"basic_security",
 								""
 							]
@@ -86,7 +85,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.example.com/basic_security/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -98,8 +97,138 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"www.example.com",
+								"{{appName}}",
 								"basic_security",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API Keys",
+			"item": [
+				{
+					"name": "API Keys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/api_keys/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"api_keys",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Keys",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 261,\r\n        \"name\": \"destro\",\r\n        \"creation_moment\": \"2023-10-29, 22:42:56\",\r\n        \"expiration_moment\": \"2025-12-31, 00:00:00\",\r\n        \"role\": \"Administrator\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/api_keys/destro/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"api_keys",
+								"destro",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Keys (Create)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"destro\",\r\n  \"role\": \"Administrator\",\r\n  \"expiration_moment\": \"2025-12-31T00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/api_keys/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"api_keys",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "API Keys - Read Only",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 261,\r\n    \"name\": \"destro\",\r\n    \"creation_moment\": \"2023-10-29T22:54:07\",\r\n    \"expiration_moment\": \"2025-12-31T00:00:00\",\r\n    \"role\": \"Manager\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/api_keys/destro/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"api_keys",
+								"destro",
 								""
 							]
 						}
@@ -146,7 +275,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/app_profiles/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/app_profiles/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -158,7 +287,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{hostname}}",
+								"{{appName}}",
 								"app_profiles",
 								""
 							]
@@ -172,7 +301,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.darklab.co/app_profiles/blog/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/app_profiles/{{appProfileName}}/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -184,9 +313,9 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"www.darklab.co",
+								"{{appName}}",
 								"app_profiles",
-								"blog",
+								"{{appProfileName}}",
 								""
 							]
 						}
@@ -306,7 +435,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/response_rewrite/rules/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/rules/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -318,7 +447,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{hostname}}",
+								"{{appName}}",
 								"response_rewrite",
 								"rules",
 								""
@@ -343,7 +472,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.darklab.co/response_rewrite/rules/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/rules/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -355,7 +484,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"www.darklab.co",
+								"{{appName}}",
 								"response_rewrite",
 								"rules",
 								""
@@ -370,7 +499,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/response_rewrite/rules/hsts/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/rules/hsts/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -382,7 +511,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{hostname}}",
+								"{{appName}}",
 								"response_rewrite",
 								"rules",
 								"hsts",
@@ -390,93 +519,6 @@
 							]
 						},
 						"description": "Endpoints"
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "API Keys",
-			"item": [
-				{
-					"name": "API Keys",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/api_keys/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"api_keys",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "API Keys",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/api_keys/destroy/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"api_keys",
-								"destroy",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "API Keys",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"destroy\",\r\n  \"role\": \"Administrator\",\r\n  \"expiration_moment\": \"2025-12-31T00:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/api_keys/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"api_keys",
-								""
-							]
-						}
 					},
 					"response": []
 				}
@@ -491,7 +533,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/violation_responses/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/violation_responses/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -503,7 +545,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{hostname}}",
+								"{{appName}}",
 								"violation_responses",
 								""
 							]
@@ -526,7 +568,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/violation_responses/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.example.com/violation_responses/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -538,7 +580,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{hostname}}",
+								"www.example.com",
 								"violation_responses",
 								""
 							]
@@ -552,7 +594,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.darklab.co/violation_responses/policies/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/violation_responses/policies/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -564,7 +606,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"www.darklab.co",
+								"{{appName}}",
 								"violation_responses",
 								"policies",
 								""
@@ -605,7 +647,7 @@
 					"response": []
 				},
 				{
-					"name": "Violation Temp",
+					"name": "Violation Example",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -695,19 +737,23 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "Backend Connectivity Test",
-			"item": [
+				},
 				{
-					"name": "Backend Test",
+					"name": "IP Reputation",
 					"request": {
-						"method": "GET",
+						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exceptions\": [\r\n        {\r\n            \"allow\": true,\r\n            \"ip\": \"1.1.1.1\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"comment\": \"\"\r\n        },\r\n        {\r\n            \"allow\": false,\r\n            \"ip\": \"9.9.9.9\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"comment\": \"\"\r\n        }\r\n    ],\r\n    \"enabled\": true,\r\n    \"blocked_countries\": [\r\n        \"EE\"\r\n    ],\r\n    \"block_barracuda_reputation_blacklist\": false,\r\n    \"block_tor_nodes\": false,\r\n    \"block_anonymous_proxies\": false,\r\n    \"block_satellite_providers\": false,\r\n    \"block_unclassified_ips\": true,\r\n    \"block_ssh_attack_sources\": false,\r\n    \"block_datacenter_ip\": false,\r\n    \"block_public_proxy\": false,\r\n    \"block_http_attack_sources\": false,\r\n    \"block_fake_crawler\": false,\r\n    \"geoip_enable_logging\": false,\r\n    \"custom_blacklisted_ip_status\": false,\r\n    \"check_registered_country\": false,\r\n    \"apply_policy_at\": \"Network Layer\",\r\n    \"asn_action\": false,\r\n    \"blocked_asn_group\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/servers_connectivity/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/ip_reputation/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -720,7 +766,67 @@
 								"waasapi",
 								"applications",
 								"{{hostname}}",
+								"ip_reputation",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Backend Connectivity Test",
+			"item": [
+				{
+					"name": "Backend Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers_connectivity/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
 								"servers_connectivity",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/roles/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"roles",
 								""
 							]
 						}
@@ -735,7 +841,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "YourBearerTokenHere",
+				"value": "YourBearerTokenValueHere",
 				"type": "string"
 			}
 		]
@@ -762,13 +868,13 @@
 	],
 	"variable": [
 		{
-			"key": "hostname",
-			"value": "YourApplicationName",
+			"key": "appName",
+			"value": "www.darklab.co",
 			"type": "string"
 		},
 		{
-			"key": "app_profile",
-			"value": "blog"
+			"key": "appProfileName",
+			"value": "root"
 		}
 	]
 }
