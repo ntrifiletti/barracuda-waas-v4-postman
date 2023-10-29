@@ -4,12 +4,12 @@ The WaaS API v4.postman_collection-1.json template in this repository is pre-loa
 
 These templates are useful when building,testing and publishing API calls, while optimizing repeated steps. 
 
-## Install POSTMAN or use Web-based Version
+## Install Postman or use Web-based Version
 What is Postman? 
 Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
 [Postman Website Download ](https://www.postman.com/downloads/).
 
-## Import into POSTMAN
+## Import into Postman
 1. Github | Copy all of the raw code for [WaaS API v4.postman_collection-1.json](https://raw.githubusercontent.com/ntrifiletti/waas-postman/main/WaaS%20API%20v4.postman_collection-1.json) into your clipboard.
 2. Postman | Open Postman and Click "Import" in the Postman Workspace of your choosing. Paste the contents of your clipboard and Accept.
 3. Postman | Navigate to the Overview and change your Authorization type and Variables to match your Waas API environment.
