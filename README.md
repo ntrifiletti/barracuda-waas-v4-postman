@@ -1,6 +1,6 @@
 ## Barracuda Web-Application-as-a-Service | Postman | API V4 Collection
 ## Introduction
-The WaaS API v4.postman_collection-1.json template in this repository is pre-loaded with API calls for GET, POST, PATCH for various functions and component management. 
+The WaaS API v4.postman_collection-1.json template in this repository is pre-loaded with API calls for GET, POST, PATCH and for various functions for complete API mangement. 
 
 These templates are useful when building,testing and publishing API calls, while optimizing repeated steps. 
 
