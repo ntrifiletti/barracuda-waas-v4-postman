@@ -1,9 +1,7 @@
 {
 	"info": {
-		"_postman_id": "0f46f37a-7f91-4948-b2ba-dcb84e2ae7e0",
 		"name": "WaaS API v4",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "10157885"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -626,7 +624,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/violation_responses/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/violation_responses/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -638,33 +636,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{hostname}}",
-								"violation_responses",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Violation Example",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.example.com/violation_responses/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"www.example.com",
+								"{{appName}}",
 								"violation_responses",
 								""
 							]
@@ -718,7 +690,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/ip_reputation/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/ip_reputation/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -730,7 +702,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{hostname}}",
+								"{{appName}}",
 								"ip_reputation",
 								""
 							]
@@ -753,7 +725,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{hostname}}/ip_reputation/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/ip_reputation/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -765,7 +737,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{hostname}}",
+								"{{appName}}",
 								"ip_reputation",
 								""
 							]
@@ -834,6 +806,223 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "Logs - Beta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/logs?itemsPerPage=100",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"logs"
+							],
+							"query": [
+								{
+									"key": "itemsPerPage",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "v2 Legacy",
+			"item": [
+				{
+					"name": "Endpoints",
+					"item": [
+						{
+							"name": "Endpoints - All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v2",
+										"waasapi",
+										"applications",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Endpoints-AppID-EndpointID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/8623/endpoints/10260/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v2",
+										"waasapi",
+										"applications",
+										"8623",
+										"endpoints",
+										"10260",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Endpoints - Ciphers list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/endpoints/ciphers_list",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v2",
+										"waasapi",
+										"applications",
+										"endpoints",
+										"ciphers_list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Logs",
+					"item": [
+						{
+							"name": "Firewall Logs 100 per page",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"logData_LogType\": \"WF\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/27321/waf/logs/?itemsPerPage=100",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v2",
+										"waasapi",
+										"applications",
+										"27321",
+										"waf",
+										"logs",
+										""
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Access Logs 100 per page",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/27321/access/logs/?itemsPerPage=100",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v2",
+										"waasapi",
+										"applications",
+										"27321",
+										"access",
+										"logs",
+										""
+									],
+									"query": [
+										{
+											"key": "itemsPerPage",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
 		}
 	],
 	"auth": {
@@ -869,7 +1058,7 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "www.darklab.co",
+			"value": "www.example.com",
 			"type": "string"
 		},
 		{
