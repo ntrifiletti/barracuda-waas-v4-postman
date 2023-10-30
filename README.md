@@ -1,6 +1,6 @@
 ## Barracuda Web-Application-Firewall-as-a-Service (WaaS) | Postman | API V4 Collection
 ## Introduction
-The WaaS_API_v4.postman_collection.json template in this repository is pre-loaded with API calls for GET, POST, PATCH and for various functions for complete API mangement. 
+The WaaS_API_v4.postman_collection.json template in this repository is pre-loaded with documented API calls and verbs for GET, POST, PATCH, DEL and other various functions for complete API management. 
 
 These templates are useful when building,testing and publishing API calls related to Barracuda Waas API Version 4 OpenAPI Spec. 
 
