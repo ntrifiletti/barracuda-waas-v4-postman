@@ -11,7 +11,7 @@ Additional API documentation can be found on the [Barracuda Swagger/OpenAPI Spec
 ## Install Postman or use Web-based Version
 What is Postman? 
 Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
-[Postman Website Download ](https://www.postman.com/downloads/).
+[Postman Website Download ](https://www.postman.com/downloads/)
 
 ## Import into Postman
 1. Github | Copy all of the raw code for [WaaS API v4.postman_collection-1.json](https://raw.githubusercontent.com/ntrifiletti/waas-postman/main/WaaS%20API%20v4.postman_collection-1.json) into your clipboard.
