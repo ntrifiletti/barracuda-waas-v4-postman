@@ -1,111 +1,10 @@
 {
 	"info": {
-		
 		"name": "WaaS API v4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		
 	},
 	"item": [
-		{
-			"name": "Basic Security",
-			"item": [
-				{
-					"name": "Basic Security Mode",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"basic_security",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Active Mode",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"protection_mode\": \"Active\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"basic_security",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Passive Mode",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"protection_mode\": \"Passive\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"basic_security",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
 		{
 			"name": "API Keys",
 			"item": [
@@ -292,6 +191,37 @@
 			]
 		},
 		{
+			"name": "App Group",
+			"item": [
+				{
+					"name": "XML Validation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/app_group_cc_container/xml_validation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"app_group_cc_container",
+								"xml_validation",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "App Profiles",
 			"item": [
 				{
@@ -341,6 +271,167 @@
 								"{{appName}}",
 								"app_profiles",
 								"{{appProfileName}}",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Basic Security",
+			"item": [
+				{
+					"name": "Basic Security Mode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"basic_security",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active Mode",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"protection_mode\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"basic_security",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Passive Mode",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"protection_mode\": \"Passive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/basic_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"basic_security",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Backend Connectivity Test",
+			"item": [
+				{
+					"name": "Backend Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers_connectivity/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"servers_connectivity",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContainerAppGroupMap",
+			"item": [
+				{
+					"name": "Container App Group Map",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/container_app_group_map/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"container_app_group_map",
 								""
 							]
 						}
@@ -468,6 +559,42 @@
 					"response": []
 				},
 				{
+					"name": "TLS Cipher Patch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \r\n        \"cipher_suite_name\": \"custom\",\r\n        \"custom_ciphers\": [\r\n            \"ECDHE-ECDSA-AES128-GCM-SHA256\",\r\n            \"ECDHE-RSA-AES128-GCM-SHA256\",\r\n            \"ECDHE-ECDSA-AES256-GCM-SHA384\",\r\n            \"ECDHE-RSA-AES256-GCM-SHA384\",\r\n            \"ECDHE-ECDSA-CHACHA20-POLY1305\",\r\n            \"ECDHE-RSA-CHACHA20-POLY1305\",\r\n            \"DHE-RSA-AES128-GCM-SHA256\",\r\n            \"DHE-RSA-AES256-GCM-SHA384\",\r\n            \"DHE-RSA-CHACHA20-POLY1305\",\r\n            \"TLS_AES_128_GCM_SHA256\",\r\n            \"TLS_CHACHA20_POLY1305_SHA256\",\r\n            \"TLS_AES_256_GCM_SHA384\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/endpoints/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"endpoints",
+								""
+							]
+						},
+						"description": "Endpoints"
+					},
+					"response": []
+				},
+				{
 					"name": "Endpoints All",
 					"request": {
 						"method": "GET",
@@ -556,6 +683,375 @@
 			]
 		},
 		{
+			"name": "IP Reputation",
+			"item": [
+				{
+					"name": "IP Reputation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/ip_reputation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"ip_reputation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IP Reputation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"exceptions\": [\r\n        {\r\n            \"allow\": true,\r\n            \"ip\": \"1.1.1.1\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"comment\": \"\"\r\n        },\r\n        {\r\n            \"allow\": false,\r\n            \"ip\": \"9.9.9.9\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"comment\": \"\"\r\n        }\r\n    ],\r\n    \"enabled\": true,\r\n    \"blocked_countries\": [\r\n        \"EE\"\r\n    ],\r\n    \"block_barracuda_reputation_blacklist\": false,\r\n    \"block_tor_nodes\": false,\r\n    \"block_anonymous_proxies\": false,\r\n    \"block_satellite_providers\": false,\r\n    \"block_unclassified_ips\": true,\r\n    \"block_ssh_attack_sources\": false,\r\n    \"block_datacenter_ip\": false,\r\n    \"block_public_proxy\": false,\r\n    \"block_http_attack_sources\": false,\r\n    \"block_fake_crawler\": false,\r\n    \"geoip_enable_logging\": false,\r\n    \"custom_blacklisted_ip_status\": false,\r\n    \"check_registered_country\": false,\r\n    \"apply_policy_at\": \"Network Layer\",\r\n    \"asn_action\": false,\r\n    \"blocked_asn_group\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/ip_reputation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"ip_reputation",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/roles/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "Logs - Beta",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/logs?itemsPerPage=100",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"logs"
+							],
+							"query": [
+								{
+									"key": "itemsPerPage",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logs - All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/logs?filters=%7B\"LogType\"%3A%5B%7B\"value\"%3A\"WF\"%2C\"condition\"%3A\"is\"%7D%5D%7D&page=1&itemsPerPage=100&dateRange%5Bfrom%5D=1698210098.694&dateRange%5Bto%5D=1698728498.694&dateRange%5BquickRange%5D=r_7d",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"logs"
+							],
+							"query": [
+								{
+									"key": "filters",
+									"value": "%7B\"LogType\"%3A%5B%7B\"value\"%3A\"WF\"%2C\"condition\"%3A\"is\"%7D%5D%7D"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "100"
+								},
+								{
+									"key": "dateRange%5Bfrom%5D",
+									"value": "1698210098.694"
+								},
+								{
+									"key": "dateRange%5Bto%5D",
+									"value": "1698728498.694"
+								},
+								{
+									"key": "dateRange%5BquickRange%5D",
+									"value": "r_7d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parameter Protection",
+			"item": [
+				{
+					"name": "Parameter Protection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/parameter_protection/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"parameter_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Parameter Protection",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"enabled\": true,\r\n    \"denied_metacharacters\": \"%00%01%04%1b%08%5c%7f\",\r\n    \"maximum_parameter_value_length\": null,\r\n    \"maximum_instances\": null,\r\n    \"base64_decode_parameter_value\": false,\r\n    \"validate_parameter_name\": false,\r\n    \"allowed_file_upload_types\": \"all\",\r\n    \"file_upload_extensions\": [\r\n        \"GIF\",\r\n        \"JPG\",\r\n        \"PDF\"\r\n    ],\r\n    \"file_upload_mime_types\": [\r\n        \"application/pdf\",\r\n        \"image/gif\",\r\n        \"image/jpeg\"\r\n    ],\r\n    \"maximum_upload_file_size\": 10024,\r\n    \"ignore_parameters\": [\r\n        \"__VIEWSTATE\"\r\n    ],\r\n    \"exception_patterns\": [],\r\n    \"sql_injection\": \"normal\",\r\n    \"os_command_injection\": \"normal\",\r\n    \"cross_site_scripting\": \"normal\",\r\n    \"remote_file_inclusion\": \"normal\",\r\n    \"ldap_injection\": \"normal\",\r\n    \"python_php_attacks\": \"normal\",\r\n    \"http_specific_injection\": \"normal\",\r\n    \"apache_struts_attacks\": \"normal\",\r\n    \"directory_traversal\": \"normal\",\r\n    \"custom_blocked_attack_type_groups\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/parameter_protection/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"parameter_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Request Limits",
+			"item": [
+				{
+					"name": "Request LImits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/request_limits/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"request_limits",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request LImits",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"enabled\": true,\r\n    \"max_request_length\": 32768,\r\n    \"max_request_line_length\": 4096,\r\n    \"max_url_length\": 4096,\r\n    \"max_query_length\": 4096,\r\n    \"max_number_of_cookies\": 40,\r\n    \"max_cookie_name_length\": 64,\r\n    \"max_cookie_value_length\": 4096,\r\n    \"max_number_of_headers\": 40,\r\n    \"max_header_name_length\": 32,\r\n    \"max_header_value_length\": 1024\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/request_limits/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"request_limits",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Request Rewrite",
+			"item": [
+				{
+					"name": "Request Rewrite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/APIS_GW/request_rewrite/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"APIS_GW",
+								"request_rewrite",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Response Rewrite",
 			"item": [
 				{
@@ -564,7 +1060,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/rules/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -578,47 +1074,10 @@
 								"applications",
 								"{{appName}}",
 								"response_rewrite",
-								"rules",
 								""
 							]
 						},
 						"description": "Endpoints"
-					},
-					"response": []
-				},
-				{
-					"name": "Response Rewrite",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/rules/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"response_rewrite",
-								"rules",
-								""
-							]
-						}
 					},
 					"response": []
 				},
@@ -628,7 +1087,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/rules/hsts/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/rules/YOUR-RULE-HERE/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -643,11 +1102,190 @@
 								"{{appName}}",
 								"response_rewrite",
 								"rules",
-								"hsts",
+								"YOUR-RULE-HERE",
 								""
 							]
 						},
 						"description": "Endpoints"
+					},
+					"response": []
+				},
+				{
+					"name": "Response Rewrite CSP + HSTS",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"(Header Host eq api.kubra.ca) && (URI eq /)\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"response_rewrite",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trusted Hosts",
+			"item": [
+				{
+					"name": "Trusted Hosts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/trusted_hosts/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"dvwa.darklab.co",
+								"trusted_hosts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trusted Hosts",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trusted_hosts\": [\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses1\",\r\n            \"ip\": \"18.205.55.118\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses2\",\r\n            \"ip\": \"18.235.72.149\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses3\",\r\n            \"ip\": \"64.235.153.135\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses4\",\r\n            \"ip\": \"64.235.153.136\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses5\",\r\n            \"ip\": \"64.235.153.34\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses6\",\r\n            \"ip\": \"3.210.84.75\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses7\",\r\n            \"ip\": \"64.235.151.153\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses8\",\r\n            \"ip\": \"54.158.232.245\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses9\",\r\n            \"ip\": \"64.235.153.133\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses10\",\r\n            \"ip\": \"64.235.153.134\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses11\",\r\n            \"ip\": \"54.156.74.187\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        }\r\n    ],\r\n    \"enabled\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/trusted_hosts/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"dvwa.darklab.co",
+								"trusted_hosts",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "URL Protection",
+			"item": [
+				{
+					"name": "URL Protection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_protection/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "URL Protection",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"enabled\": true,\r\n    \"allowed_methods\": [\r\n        \"GET\",\r\n        \"HEAD\",\r\n        \"POST\"\r\n    ],\r\n    \"allowed_content_types\": [\r\n        \"text/plain\",\r\n        \"application/json\",\r\n        \"application/x-www-form-urlencoded\",\r\n        \"multipart/form-data\",\r\n        \"text/xml\"\r\n    ],\r\n    \"max_content_length\": null,\r\n    \"max_parameters\": 120,\r\n    \"maximum_upload_files\": 5,\r\n    \"csrf_prevention\": \"None\",\r\n    \"maximum_parameter_name_length\": 64,\r\n    \"allow_tilde_in_url\": false,\r\n    \"allow_slash_dot_in_url\": false,\r\n    \"exception_patterns\": [],\r\n    \"sql_injection\": \"normal\",\r\n    \"os_command_injection\": \"normal\",\r\n    \"cross_site_scripting\": \"normal\",\r\n    \"remote_file_inclusion\": \"normal\",\r\n    \"ldap_injection\": \"normal\",\r\n    \"python_php_attacks\": \"normal\",\r\n    \"http_specific_injection\": \"normal\",\r\n    \"apache_struts_attacks\": \"normal\",\r\n    \"custom_blocked_attack_type_groups\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_protection/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_protection",
+								""
+							]
+						}
 					},
 					"response": []
 				}
@@ -805,243 +1443,6 @@
 								"www.example.com",
 								"violation_responses",
 								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "IP Reputation",
-			"item": [
-				{
-					"name": "IP Reputation",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/ip_reputation/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"ip_reputation",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "IP Reputation",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"exceptions\": [\r\n        {\r\n            \"allow\": true,\r\n            \"ip\": \"1.1.1.1\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"comment\": \"\"\r\n        },\r\n        {\r\n            \"allow\": false,\r\n            \"ip\": \"9.9.9.9\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"comment\": \"\"\r\n        }\r\n    ],\r\n    \"enabled\": true,\r\n    \"blocked_countries\": [\r\n        \"EE\"\r\n    ],\r\n    \"block_barracuda_reputation_blacklist\": false,\r\n    \"block_tor_nodes\": false,\r\n    \"block_anonymous_proxies\": false,\r\n    \"block_satellite_providers\": false,\r\n    \"block_unclassified_ips\": true,\r\n    \"block_ssh_attack_sources\": false,\r\n    \"block_datacenter_ip\": false,\r\n    \"block_public_proxy\": false,\r\n    \"block_http_attack_sources\": false,\r\n    \"block_fake_crawler\": false,\r\n    \"geoip_enable_logging\": false,\r\n    \"custom_blacklisted_ip_status\": false,\r\n    \"check_registered_country\": false,\r\n    \"apply_policy_at\": \"Network Layer\",\r\n    \"asn_action\": false,\r\n    \"blocked_asn_group\": null\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/ip_reputation/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"ip_reputation",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Backend Connectivity Test",
-			"item": [
-				{
-					"name": "Backend Test",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers_connectivity/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"servers_connectivity",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Roles",
-			"item": [
-				{
-					"name": "Roles",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/roles/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"roles",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Logs",
-			"item": [
-				{
-					"name": "Logs - Beta",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/logs?itemsPerPage=100",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"logs"
-							],
-							"query": [
-								{
-									"key": "itemsPerPage",
-									"value": "100"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Logs - All",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/logs?filters=%7B\"LogType\"%3A%5B%7B\"value\"%3A\"WF\"%2C\"condition\"%3A\"is\"%7D%5D%7D&page=1&itemsPerPage=100&dateRange%5Bfrom%5D=1698210098.694&dateRange%5Bto%5D=1698728498.694&dateRange%5BquickRange%5D=r_7d",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"logs"
-							],
-							"query": [
-								{
-									"key": "filters",
-									"value": "%7B\"LogType\"%3A%5B%7B\"value\"%3A\"WF\"%2C\"condition\"%3A\"is\"%7D%5D%7D"
-								},
-								{
-									"key": "page",
-									"value": "1"
-								},
-								{
-									"key": "itemsPerPage",
-									"value": "100"
-								},
-								{
-									"key": "dateRange%5Bfrom%5D",
-									"value": "1698210098.694"
-								},
-								{
-									"key": "dateRange%5Bto%5D",
-									"value": "1698728498.694"
-								},
-								{
-									"key": "dateRange%5BquickRange%5D",
-									"value": "r_7d"
-								}
 							]
 						}
 					},
@@ -1219,15 +1620,15 @@
 			]
 		},
 		{
-			"name": "Request Rewrite",
+			"name": "URL Translations",
 			"item": [
 				{
-					"name": "Request Rewrite",
+					"name": "URL Translations",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/APIS_GW/request_rewrite/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -1239,51 +1640,8 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"APIS_GW",
-								"request_rewrite",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Trusted Hosts",
-			"item": [
-				{
-					"name": "Trusted Hosts",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/trusted_hosts/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"dvwa.darklab.co",
-								"trusted_hosts",
+								"{{appName}}",
+								"url_translation",
 								""
 							]
 						}
@@ -1291,21 +1649,12 @@
 					"response": []
 				},
 				{
-					"name": "Trusted Hosts",
+					"name": "URL Translations",
 					"request": {
-						"method": "PATCH",
+						"method": "PUT",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"trusted_hosts\": [\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses1\",\r\n            \"ip\": \"18.205.55.118\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses2\",\r\n            \"ip\": \"18.235.72.149\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses3\",\r\n            \"ip\": \"64.235.153.135\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses4\",\r\n            \"ip\": \"64.235.153.136\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses5\",\r\n            \"ip\": \"64.235.153.34\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses6\",\r\n            \"ip\": \"3.210.84.75\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses7\",\r\n            \"ip\": \"64.235.151.153\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses8\",\r\n            \"ip\": \"54.158.232.245\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses9\",\r\n            \"ip\": \"64.235.153.133\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses10\",\r\n            \"ip\": \"64.235.153.134\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        },\r\n        {\r\n            \"hostname\": \"BVRS_IP_Addresses11\",\r\n            \"ip\": \"54.156.74.187\",\r\n            \"netmask\": \"255.255.255.255\",\r\n            \"note\": \"\",\r\n            \"ipv6\": \"\",\r\n            \"ipv6_netmask\": \"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\r\n            \"version\": \"IPv4\"\r\n        }\r\n    ],\r\n    \"enabled\": false\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/trusted_hosts/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -1317,8 +1666,43 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"dvwa.darklab.co",
-								"trusted_hosts",
+								"{{appName}}",
+								"url_translation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "URL Translations",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n      \"name\": \"cxp-gateway-v1\",\r\n      \"inside_prefix\": \"/cpx/v1\",\r\n      \"outside_prefix\": \"/hub\",\r\n      \"inside_domain\": \"api-gw.kubra.com\",\r\n      \"outside_domain\": \"api.kubra.com\",\r\n      \"comments\": \"This is an example URL translation rule\"\r\n    }\r\n  ],\r\n  \"is_enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_translation",
 								""
 							]
 						}
@@ -1333,7 +1717,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "Your Bearer Token Here",
+				"value": "123.YourBearerTokenHere",
 				"type": "string"
 			}
 		]
@@ -1361,12 +1745,12 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "YourAppNamefromApplicationsName",
+			"value": "YourApplicationNameHere",
 			"type": "string"
 		},
 		{
 			"key": "appProfileName",
-			"value": "root"
+			"value": "root_star"
 		}
 	]
 }
