@@ -16,10 +16,11 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 
 ## Import into Postman
 1. Github | Copy all of the raw code for [WaaS_API_v4.postman_collection.json](https://github.com/ntrifiletti/barracuda-waas-v4-postman/blob/main/WaaS_API_v4.postman_collection.json) into your clipboard.
-2. Postman | Open Postman and Click "Import" in the Postman Workspace of your choosing. Paste the contents of your clipboard and Accept.
-3. Postman | Navigate to the Top-level of the Collection Overview tabs and [change your Authorization type](https://learning.postman.com/docs/sending-requests/authorization/specifying-authorization-details) and [variables](https://learning.postman.com/docs/sending-requests/variables/) to match your Waas API environment.
-4. Postman | Click Send to initiate API calls.
-5. Postman |Verify the Response Body and Status Codes for succesful transactions. 
+2. Postman | Open Postman and Click "Import" in the Postman Workspace of your choosing. Paste the contents of your clipboard into the to bar.
+3. Click Import as Copy (Recommended) to create the Collection. 
+4. Postman | Navigate to the Top-level of the Collection Overview tabs and [change your Authorization type](https://learning.postman.com/docs/sending-requests/authorization/specifying-authorization-details) and [variables](https://learning.postman.com/docs/sending-requests/variables/) to match your Waas API environment.
+5. Postman | Click Send to initiate API calls.
+6. Postman |Verify the Response Body and Status Codes for succesful transactions. 
 
 
 
