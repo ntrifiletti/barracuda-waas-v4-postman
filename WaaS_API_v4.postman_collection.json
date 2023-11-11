@@ -2,7 +2,6 @@
 	"info": {
 		"name": "WaaS API v4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-		
 	},
 	"item": [
 		{
@@ -271,6 +270,59 @@
 								"{{appName}}",
 								"app_profiles",
 								"{{appProfileName}}",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attack Types",
+			"item": [
+				{
+					"name": "Attack Types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "247.ZYqp3bZ0dShPICwiZYyuQwWREbow6N6h",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"attack_types",
 								""
 							]
 						}
@@ -1117,7 +1169,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"(Header Host eq api.kubra.ca) && (URI eq /)\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1138,6 +1190,111 @@
 								"waasapi",
 								"applications",
 								"{{appName}}",
+								"response_rewrite",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PCI DSS 4",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src: 'self';object-src: 'self'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"response_rewrite",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PCI DSS 4 Test",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"response_rewrite",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response Rewrite - Beta",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    },\r\n    {\r\n        \"name\": \"privacy\",\r\n        \"sequence_number\": 3,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Feature-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"camera 'none';microphone 'none';geolocation 'none';encrypted-media 'none';payment 'none';speaker 'none';usb 'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for Browser privacy features.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.example.com/response_rewrite/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"www.example.com",
 								"response_rewrite",
 								""
 							]
@@ -1717,7 +1874,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "123.YourBearerTokenHere",
+				"value": "420.YourKeyHere",
 				"type": "string"
 			}
 		]
@@ -1745,7 +1902,7 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "YourApplicationNameHere",
+			"value": "www.example.com",
 			"type": "string"
 		},
 		{
