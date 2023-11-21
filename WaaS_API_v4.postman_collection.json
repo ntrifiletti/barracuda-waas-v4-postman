@@ -1,7 +1,10 @@
 {
 	"info": {
+		"_postman_id": "8dbf02ad-9646-4484-ab29-ccbbde9b376f",
 		"name": "WaaS API v4",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10157885",
+		"_collection_link": "https://gold-flare-251534.postman.co/workspace/dev~9295dbb4-262d-4515-b0f3-3c8ddcd34d29/collection/10157885-8dbf02ad-9646-4484-ab29-ccbbde9b376f?action=share&source=collection_link&creator=10157885"
 	},
 	"item": [
 		{
@@ -212,6 +215,32 @@
 								"app_groups",
 								"app_group_cc_container",
 								"xml_validation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Datapath Options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/datapath_options/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"datapath_options",
 								""
 							]
 						}
@@ -464,6 +493,233 @@
 			]
 		},
 		{
+			"name": "Blocked Bots",
+			"item": [
+				{
+					"name": "Blocked Bots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/blocked_bots/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"blocked_bots",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blocked Bots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/blocked_bots/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"blocked_bots",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blocked Bots",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/blocked_bots/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"blocked_bots",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Caching & Compression",
+			"item": [
+				{
+					"name": "Caching & Compression",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/caching_and_compression/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"caching_and_compression",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caching & Compression",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/caching_and_compression/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"caching_and_compression",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Caching & Compression",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/caching_and_compression/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"caching_and_compression",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CDN",
+			"item": [
+				{
+					"name": "CDN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cdn/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cdn",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "ContainerAppGroupMap",
 			"item": [
 				{
@@ -484,6 +740,89 @@
 								"v4",
 								"waasapi",
 								"container_app_group_map",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cookie Security",
+			"item": [
+				{
+					"name": "Cookie Security",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cookie_security",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cookie Security",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cookie_security",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cookie Security",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cookie_security",
 								""
 							]
 						}
@@ -527,6 +866,107 @@
 								"applications",
 								"dvwa.darklab.co",
 								"client_evaluation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Client Evaluation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": true,\r\n            \"enforce_captcha\": \"suspicious_clients_only\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"reCAPTCHA v3\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"6Lf30eYoAAAAADopggFu7q74W-4LJ0pijlV2eLL5\",\r\n    \"captcha_site_key\": \"6Lf30eYoAAAAAAKCVW3tXPep5WyrRJY2efBbeHDh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/client_evaluation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"dvwa.darklab.co",
+								"client_evaluation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Client Evaluation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": true,\r\n            \"enforce_captcha\": \"suspicious_clients_only\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"reCAPTCHA v3\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"6Lf30eYoAAAAADopggFu7q74W-4LJ0pijlV2eLL5\",\r\n    \"captcha_site_key\": \"6Lf30eYoAAAAAAKCVW3tXPep5WyrRJY2efBbeHDh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/client_evaluation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"dvwa.darklab.co",
+								"client_evaluation",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clickjacking Protection",
+			"item": [
+				{
+					"name": "Clickjacking Protection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/clickjacking_protection/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"clickjacking_protection",
 								""
 							]
 						}
@@ -704,7 +1144,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"ports\": [\r\n        {\r\n            \"protocol\": \"HTTPS\",\r\n            \"port\": 443,\r\n            \"waf_container_exposed_port\": null\r\n        },\r\n        {\r\n            \"protocol\": \"Redirect Service\",\r\n            \"port\": 80,\r\n            \"waf_container_exposed_port\": null,\r\n            \"is_permanent_redirect\": false\r\n        }\r\n    ],\r\n    \"domains\": [\r\n        \"s3.darklab.co\"\r\n    ],\r\n    \"deployment\": {\r\n        \"primary\": \"northcentralus\",\r\n        \"secondary\": \"canadacentral\",\r\n        \"is_auto_region\": true,\r\n        \"third_location\": null,\r\n        \"redirect_dc_traffic_to_azure\": false,\r\n        \"is_dedicated_ip\": true\r\n    },\r\n    \"advanced\": {\r\n        \"session_timeout\": 60,\r\n        \"keepalive_requests\": 64,\r\n        \"ntlm_ignore_extra_data\": false,\r\n        \"enable_vdi\": false,\r\n        \"enable_http2\": false,\r\n        \"enable_websocket\": false,\r\n        \"enable_fingerprint\": true,\r\n        \"enable_web_application_firewall\": true,\r\n        \"enable_proxy_protocol\": false\r\n    },\r\n    \"https\": {\r\n        \"enable_tls_1\": false,\r\n        \"enable_tls_1_1\": false,\r\n        \"enable_tls_1_2\": true,\r\n        \"enable_tls_1_3\": true,\r\n        \"enable_ssl_3\": false,\r\n        \"cipher_suite_name\": \"custom\",\r\n        \"custom_ciphers\": [\r\n            \"ECDHE-ECDSA-AES128-GCM-SHA256\",\r\n            \"ECDHE-RSA-AES128-GCM-SHA256\",\r\n            \"ECDHE-ECDSA-AES256-GCM-SHA384\",\r\n            \"ECDHE-RSA-AES256-GCM-SHA384\",\r\n            \"ECDHE-ECDSA-CHACHA20-POLY1305\",\r\n            \"ECDHE-RSA-CHACHA20-POLY1305\",\r\n            \"DHE-RSA-AES128-GCM-SHA256\",\r\n            \"DHE-RSA-AES256-GCM-SHA384\",\r\n            \"DHE-RSA-CHACHA20-POLY1305\",\r\n            \"TLS_AES_128_GCM_SHA256\",\r\n            \"TLS_CHACHA20_POLY1305_SHA256\",\r\n            \"TLS_AES_256_GCM_SHA384\"\r\n        ],\r\n        \"enable_pfs\": false\r\n    },\r\n    \"certificate\": {\r\n        \"use_automatic\": true,\r\n        \"ssl_certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIE5TCCA82gAwIBAgISBO9w/aaGC6VaJ8QviTua0KIfMA0GCSqGSIb3DQEBCwUA\\nMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD\\nEwJSMzAeFw0yMzEwMjcwMTQxNTlaFw0yNDAxMjUwMTQxNThaMBgxFjAUBgNVBAMT\\nDXMzLmRhcmtsYWIuY28wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDy\\ny2G3mKr4zDylXJL9jx7Be8iE+LeBEoHFm+MblU9t51uVgYYeuERzV5EunZ97ibA1\\nWEVCMm4pXPAlNYH85Y/+8VlYWJTd7J+zTBIJHiqutHVsVhPnYYyOacTtcYWW4apx\\nE1mo7XejticqTEYOEBpJpthG51DlEykrWMbOS3BldNqT3hfpZoks8PildzehYPgW\\nWvx6QqQDilT8bxqCDjU+w7e63h2CBnZ2ZT+g/73uxVzo+UkFwGFRY+tGrrNX7ROx\\npSbnp/2KBASc4tUDu7aZ4ZTPVfOOJU3M+SZBOr188YsyVoK7oRH4ECxJ4+iGi6FG\\ntOnZAPODo2wihs3StG3xAgMBAAGjggINMIICCTAOBgNVHQ8BAf8EBAMCBaAwHQYD\\nVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0O\\nBBYEFCI4dYHxu6vmKkVg1M/AEfxGJ1+DMB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJ\\nQOYfr52LFMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3Iz\\nLm8ubGVuY3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcv\\nMBgGA1UdEQQRMA+CDXMzLmRhcmtsYWIuY28wEwYDVR0gBAwwCjAIBgZngQwBAgEw\\nggECBgorBgEEAdZ5AgQCBIHzBIHwAO4AdQDatr9rP7W2Ip+bwrtca+hwkXFsu1GE\\nhTS9pD0wSNf7qwAAAYtvAoquAAAEAwBGMEQCIFHkuhRG3+uP8R+RysfDq/5hxVEW\\ns5/9V53Jtu2Lnbc2AiAWh/ZlolPo2o/gBQxvhXg+YzVNdw8U0apbBWLI8uipJAB1\\nADtTd3U+LbmAToswWwb+QDtn2E/D9Me9AA0tcm/h+tQXAAABi28CiucAAAQDAEYw\\nRAIgJNUQlaVIQG84JLSHKmc1pDWagOywiKhKvQkpmrHfiKcCIFjmfh6/ChupewKv\\nxhAlR7bRgpi5lfWl7VBPwNhA/0o7MA0GCSqGSIb3DQEBCwUAA4IBAQCEBCzfTc9g\\n/Go2oTxW7iLwvCfZOIQBcmMVF+bhUbZcVhxwnAKy3i/m59tyPHIKcGM7l2PL6Jbk\\nS8wJlsFFPUUvTwT56uYE8OEpQENXpO0QtxxDHiwN2fEIGMIzVQDWA5Ljderx0j7R\\noGdZBezv5C+BMWwmmjJwO0EDARFykZ6wXL5eieYoGKhclqymINWHiiHRUh/n9IOR\\nmBvOPHfowlYnCESLyXDiRcQixRuj5p8gSNNhNH/dPpdSJWDhv25oHHb4y61W91L0\\nPA/dXzNFvrNdOXeqXE+Wz15Rb19MwYE3WHbC0fvNoFd41xpSKavgKaNQiJW0goo5\\n8Mxo+S5mSsDS\\n-----END CERTIFICATE-----\\n\\n-----BEGIN CERTIFICATE-----\\nMIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw\\nTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\ncmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw\\nWhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg\\nRW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\\nAoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP\\nR5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx\\nsxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm\\nNHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg\\nZ3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG\\n/kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC\\nAYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB\\nAf8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA\\nFHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw\\nAoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw\\nOi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB\\ngt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W\\nPTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl\\nikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz\\nCkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm\\nlJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4\\navAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2\\nyJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O\\nyK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids\\nhCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+\\nHlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv\\nMldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX\\nnLRbwHOoq7hHwg==\\n-----END CERTIFICATE-----\\n\\n-----BEGIN CERTIFICATE-----\\nMIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/\\nMSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT\\nDkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1ow\\nTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\ncmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEB\\nAQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XC\\nov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpL\\nwYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+D\\nLtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK\\n4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5\\nbHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5y\\nsR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZ\\nXmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4\\nFQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBc\\nSLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2ql\\nPRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TND\\nTwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw\\nSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1\\nc3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx\\n+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEB\\nATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQu\\nb3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9E\\nU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26Ztu\\nMA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC\\n5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW\\n9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuG\\nWCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9O\\nhe8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFC\\nDfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5\\n-----END CERTIFICATE-----\\n\",\r\n        \"encrypted_ssl_private_key\": \"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\",\r\n        \"aes_key_encrypted\": \"kH7roH70D3jLoQaWnU9DU4gBB11qgRdK+AOX9wAvtCqa/KmZnp+Z1FnICBvX1/PLotEfefnqGJMmvVEnLiz677MW6K8+cfX3b6DojqkZTH0m6362I4wSn5GthRXZX7DI7AnWMqb54G2sKUqISMPHOZecUgYwQO5i2w8WQmBrM3V82W39FH9xdx8wTEcC1pLsulQJThgCFtpqsWwxHekJCLctpGTCS2o54LQcQ2eSY7ywfttcszC740sjO0GzAOExYkoXtgLVTl6AoUx+BQlmAETOobkqTjUCJwUbCBNyYvGzMTDdytRVceHIuUVQ7JkAVqXgb8ZfQyTlcTxcX/X+5g==\",\r\n        \"aes_key_customer_container\": null,\r\n        \"ssl_private_key_customer_container\": null\r\n    },\r\n    \"cname\": \"app540559.prod.cudawaas.com\",\r\n    \"sni_certificates\": [\r\n      {\r\n        \"name\": \"*.wildcard.com\",\r\n        \"use_automatic\": false,\r\n        \"ssl_certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIGOzCCBSOgAwIBAgIRAJQydeP1JIA904fD3m06MlcwDQYJKoZIhvcNAQELBQAw\\ngY8xCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO\\nBgNVBAcTB1NhbGZvcmQxGDAWBgNVBAoTD1NlY3RpZ28gTGltaXRlZDE3MDUGA1UE\\nAxMuU2VjdGlnbyBSU0EgRG9tYWluIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBD\\nQTAeFw0yMjEwMjEwMDAwMDBaFw0yMzExMjEyMzU5NTlaMBsxGTAXBgNVBAMMECou\\nZXVyb2RhdGFjYXIuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDc\\nLaDesw6HPDyMSTmgGTOVOwcP82qPWPjFWNOc0FVN98QODKklAmLFUfPz1zjk+lgP\\n7WWEUaQJhaRFoW7RRdyuxLdbpwfvqythf83NmH9o2ucBkxzAPNS/Uz5nkSZwaaVa\\ngS++RFJTdabZAfU8YThcNYhHVpOMaCEhInmU8kHZAF0SvRqF1/f4KQRPyScSSazG\\neCCOujQuBv8XOX/d0r3SNAcf2waPQ+vA4/EoIHABKHR0FmiMUpc/urcemHRipFvu\\nOdVh1+X4F1emmPOPRtdWqIqlLH128YfRiwpjaqcypjR32yyZKAB9FjTz4DvwvQ0c\\nqW+6DAtJYbnyk8NHsftBAgMBAAGjggMDMIIC/zAfBgNVHSMEGDAWgBSNjF7EVK2K\\n4Xfpm/mbBeG4AY1h4TAdBgNVHQ4EFgQUocWsxF/L6hC3o3k35VFDCZ+nrj0wDgYD\\nVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEG\\nCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAgcwJTAjBggrBgEFBQcC\\nARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQIBMIGEBggrBgEFBQcB\\nAQR4MHYwTwYIKwYBBQUHMAKGQ2h0dHA6Ly9jcnQuc2VjdGlnby5jb20vU2VjdGln\\nb1JTQURvbWFpblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQS5jcnQwIwYIKwYBBQUH\\nMAGGF2h0dHA6Ly9vY3NwLnNlY3RpZ28uY29tMCsGA1UdEQQkMCKCECouZXVyb2Rh\\ndGFjYXIuZnKCDmV1cm9kYXRhY2FyLmZyMIIBfwYKKwYBBAHWeQIEAgSCAW8EggFr\\nAWkAdgCt9776fP8QyIudPZwePhhqtGcpXc+xDCTKhYY069yCigAAAYP6ce/3AAAE\\nAwBHMEUCIQDKLkiUJgXTEOb13b4ObhCORQjMWkjLQ17dj100LyaZpQIgf/9UcOWe\\nMzEbly2YOMjtmWYHZCrIAKpjMW7vlmz9W98AdwB6MoxU2LcttiDqOOBSHumEFnAy\\nE4VNO9IrwTpXo1LrUgAAAYP6cfADAAAEAwBIMEYCIQCXXwEt1DorzQhqovt+fJE6\\nQoblK00IuRajdGRBmBRB0wIhAPXuf7GeeY7bVSd3Bs6dNgvSMD6C7BQs7/TictiX\\nefB0AHYA6D7Q2j71BjUy51covIlryQPTy9ERa+zraeF3fW0GvW4AAAGD+nHvyAAA\\nBAMARzBFAiBv0wO9WiIySQRuylj5e5GfbTrTXINFc0IZBvN2Hy/5MAIhAOyCbtG4\\nOM7784JXofU1aAPFB9m/FeJ+LJ8ffRdQmMYpMA0GCSqGSIb3DQEBCwUAA4IBAQBs\\nypPOZBmLkR4l0CtlsypBqnjsgyiF3qLbUzCqM8h8V/75+KCHu/EdjW/jpTvi2aOg\\nXG3hlh6yWcGxlptVX3M6KwFWHdRLbmMVLKH2OlIqaJCUzrpypLBBdNS0+Ol0W9dL\\nPf2fgru6KEKHCybMRKVWTaK1/IttcrsjrAB9Ux7aeO30xQ5X8lh5Erp7J4atzwdF\\nOmbNF+5UqqFgYrJ0nP6BuIMuMVezA0wLzPIyfsyKfVUYb3Zor0IgwkByM5SNBsUS\\n9RSP949k1NV+yYMrzbj22Xw93Y0cnJAbZLBrKcjBgKjqm0jH9DHZwTFacsLy3I9O\\nfj1eTuVxoRk2RDYCt8Pz\\n-----END CERTIFICATE-----\",\r\n        \"certificate_expiration\": \"2023-11-21T23:59:59Z\",\r\n        \"aes_key\": null,\r\n        \"aes_key_encrypted\": \"IYOjkG2zAKkVNtixN8A9/IYXf2BDkW3et2UveJsmWfMmCTvhgNRgRC4vaCE+y+b3k6dGB3tU8WzxtbdMZsRSwYUmqeVJneejDoYPuzjfmhgnaM1AH85vYRcSxdzRetsGFE55zXpDFtptTBOFGCM00kMnDgrtGkGlaxHmxPoep7dZOmgT21gLaNoTh1bICaMau9aqfnwk0yBE7g3hZx2sdIFxs5/TBEC004txVmFBr5L4eMZ713gd8J/oWtLmS29ZBZOtS/zDFJofT6ysl1QjnV/XPm5t1Ny4Q77AqZpNb92JZWwiaagIu1W/vHhRNhBH5v8a16zDt5MxERn1NvlJoQ==\",\r\n        \"ssl_private_key_customer_container\": null,\r\n        \"aes_key_customer_container\": null,\r\n        \"domains\": [\r\n          \"*.als.com\"\r\n        ],\r\n        \"enable_container_secret\": false,\r\n        \"container_secret_ssl_certificate\": \"\",\r\n        \"container_secret_ssl_private_key\": \"\",\r\n        \"encrypted_ssl_private_key\": \"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\"\r\n      },\r\n      {\r\n        \"name\": \"string\",\r\n        \"use_automatic\": false,\r\n        \"ssl_certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIGPDCCBSSgAwIBAgIQOrPq70O/u18DFnIs8xfWgDANBgkqhkiG9w0BAQsFADCB\\njzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G\\nA1UEBxMHU2FsZm9yZDEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMTcwNQYDVQQD\\nEy5TZWN0aWdvIFJTQSBEb21haW4gVmFsaWRhdGlvbiBTZWN1cmUgU2VydmVyIENB\\nMB4XDTIyMDkwNTAwMDAwMFoXDTIzMTAwNjIzNTk1OVowGjEYMBYGA1UEAxMPc3lu\\nZXJnaWUtZWRjLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArNZz\\nRgxzHspOygTwPj5ExD4jq98G/nP6qI3ifxC72dnYd+xgS+38ZgswE1ymehvKKv08\\nm8TbynI6aZnbs0J3TAoggXiKXT4kGzfdLviezTVyQCVlShCwr8vGgwtcXVFJLc8A\\nBVC9qHGrgqyVMNOlD0sveuwA5yYNGDEh3ZEEZt0uVoVCHotAdDl2gxTFqunZv4Is\\nJ5FLitAuFoUES27OLZsz40K306kFf2XnrUS1GpArhMzTuTw2dYDldLAHjpDxOk8c\\noxpw/Mz5UXhga0dQkor/Il3FzuHnELS7HsbQQ9QCjwQiFFBeMuhWJ4gMMD9Dhwds\\nex/em9Mi61JT88cqgQIDAQABo4IDBjCCAwIwHwYDVR0jBBgwFoAUjYxexFStiuF3\\n6Zv5mwXhuAGNYeEwHQYDVR0OBBYEFHHW5okScwutfPwkrPt3mq/vT/+KMA4GA1Ud\\nDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggr\\nBgEFBQcDAjBJBgNVHSAEQjBAMDQGCysGAQQBsjEBAgIHMCUwIwYIKwYBBQUHAgEW\\nF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMAgGBmeBDAECATCBhAYIKwYBBQUHAQEE\\neDB2ME8GCCsGAQUFBzAChkNodHRwOi8vY3J0LnNlY3RpZ28uY29tL1NlY3RpZ29S\\nU0FEb21haW5WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3J0MCMGCCsGAQUFBzAB\\nhhdodHRwOi8vb2NzcC5zZWN0aWdvLmNvbTAvBgNVHREEKDAmgg9zeW5lcmdpZS1l\\nZGMuZnKCE3d3dy5zeW5lcmdpZS1lZGMuZnIwggF+BgorBgEEAdZ5AgQCBIIBbgSC\\nAWoBaAB1AK33vvp8/xDIi509nB4+GGq0Zyldz7EMJMqFhjTr3IKKAAABgwzxNc8A\\nAAQDAEYwRAIgUkZVYOiED8B+KEfVnqCZrtJgtfvlrk16bRKLx6AnAHgCID6oV8xr\\n34sfXk/wetwM779o0HQ6FledQBtzNrnZaWdHAHYAejKMVNi3LbYg6jjgUh7phBZw\\nMhOFTTvSK8E6V6NS61IAAAGDDPE1pwAABAMARzBFAiEA1YTS5t+r7idCzqxdDZk+\\nRvbz7teDm2RAegLbCveJzFgCIFlMX16h7TyRXUZ2rKJKJtv9NWCobVv76HYp4827\\nS3RpAHcA6D7Q2j71BjUy51covIlryQPTy9ERa+zraeF3fW0GvW4AAAGDDPE1cgAA\\nBAMASDBGAiEAuMwnxyZmGsvwtUtLZxx3cr3tR/ZNW3sXJCqNqXSQP5ACIQD2Kx7/\\nEfwdRJ+u5424fGhrqZBfvRHp+IM6SpQxNF0K0zANBgkqhkiG9w0BAQsFAAOCAQEA\\nh5nyvJlTFwDJ4x3iApsZdSdf2b9OGzydDgLEdUxXED7l4SNI5XZwE8MNVLpriXvY\\nF4yRNcFIDwpjYdwNoMa33neQnrc8DQ+s0Skm+JFtkG0HEKIwWIdqrb5X5UZAyte3\\n8IwoEQJwWWpUKRvWXwpfOsbchXA1qlHER/wIC7XvD8vw9QqguTlBdi4xpVIWdt8u\\nf4xibEgQW6A9XJaovpNQ8TAZakPNgevWiyFXUcUifmePTciKPc0ViAwdsVPhOvAz\\ng2DMkYid8P704PIWdcQnWeIAf3tcXBGMOLyRP/1sySZ0kqdt8d58kHJwHMzW56o4\\nS/nIWGO7LAyYudQ3UnxMdQ==\\n-----END CERTIFICATE-----\",\r\n        \"certificate_expiration\": \"2023-10-06T23:59:59Z\",\r\n        \"aes_key\": null,\r\n        \"aes_key_encrypted\": \"2Bl9mwkcJbwHKu+ZBH18NMQVgHou/zMipX3WZ7wxduTOvAO+QhEmkN8R/OrGoEOrbreUGx8WBTUG28Fij4xn1dGGfLA2k0tz6M6JY04ZMIPE7cyV7cpv5EBEpjdO9CpY0PMsEF38hDL1xtCqTwPUh8oz0rj68DM74T/1YfWd/6rR6+62b7W2XzMWI541OCm8BK0LzUD70WpDvr9qaU+2YJUez8CytiJh7fHGaI3uhSvasb3ISsZTZ+qJlvIB63kKAWYEn8UQ6n0kMlK3KoSgcti3Ksah5XTVTkF634yVO5wM5SpooDttJK59rvg6hN1/NNTaSQcS8IE7hUN3S2w3Vw==\",\r\n        \"ssl_private_key_customer_container\": null,\r\n        \"aes_key_customer_container\": null,\r\n        \"domains\": [\r\n          \"*.nls.com\"\r\n        ],\r\n        \"enable_container_secret\": false,\r\n        \"container_secret_ssl_certificate\": \"\",\r\n        \"container_secret_ssl_private_key\": \"\",\r\n        \"encrypted_ssl_private_key\": \"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\"\r\n      }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"ports\": [\r\n        {\r\n            \"protocol\": \"HTTPS\",\r\n            \"port\": 443,\r\n            \"waf_container_exposed_port\": null\r\n        },\r\n        {\r\n            \"protocol\": \"Redirect Service\",\r\n            \"port\": 80,\r\n            \"waf_container_exposed_port\": null,\r\n            \"is_permanent_redirect\": false\r\n        }\r\n    ],\r\n    \"domains\": [\r\n        \"s3.darklab.co\"\r\n    ],\r\n    \"deployment\": {\r\n        \"primary\": \"northcentralus\",\r\n        \"secondary\": \"canadacentral\",\r\n        \"is_auto_region\": true,\r\n        \"third_location\": null,\r\n        \"redirect_dc_traffic_to_azure\": false,\r\n        \"is_dedicated_ip\": true\r\n    },\r\n    \"advanced\": {\r\n        \"session_timeout\": 60,\r\n        \"keepalive_requests\": 64,\r\n        \"ntlm_ignore_extra_data\": false,\r\n        \"enable_vdi\": false,\r\n        \"enable_http2\": false,\r\n        \"enable_websocket\": false,\r\n        \"enable_fingerprint\": true,\r\n        \"enable_web_application_firewall\": true,\r\n        \"enable_proxy_protocol\": false\r\n    },\r\n    \"https\": {\r\n        \"enable_tls_1\": false,\r\n        \"enable_tls_1_1\": false,\r\n        \"enable_tls_1_2\": true,\r\n        \"enable_tls_1_3\": true,\r\n        \"enable_ssl_3\": false,\r\n        \"cipher_suite_name\": \"custom\",\r\n        \"custom_ciphers\": [\r\n            \"ECDHE-ECDSA-AES128-GCM-SHA256\",\r\n            \"ECDHE-RSA-AES128-GCM-SHA256\",\r\n            \"ECDHE-ECDSA-AES256-GCM-SHA384\",\r\n            \"ECDHE-RSA-AES256-GCM-SHA384\",\r\n            \"ECDHE-ECDSA-CHACHA20-POLY1305\",\r\n            \"ECDHE-RSA-CHACHA20-POLY1305\",\r\n            \"DHE-RSA-AES128-GCM-SHA256\",\r\n            \"DHE-RSA-AES256-GCM-SHA384\",\r\n            \"DHE-RSA-CHACHA20-POLY1305\",\r\n            \"TLS_AES_128_GCM_SHA256\",\r\n            \"TLS_CHACHA20_POLY1305_SHA256\",\r\n            \"TLS_AES_256_GCM_SHA384\"\r\n        ],\r\n        \"enable_pfs\": false\r\n    },\r\n    \"certificate\": {\r\n        \"use_automatic\": true,\r\n        \"ssl_certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIE5TCCA82gAwIBAgISBO9w/aaGC6VaJ8QviTua0KIfMA0GCSqGSIb3DQEBCwUA\\nMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD\\nEwJSMzAeFw0yMzEwMjcwMTQxNTlaFw0yNDAxMjUwMTQxNThaMBgxFjAUBgNVBAMT\\nDXMzLmRhcmtsYWIuY28wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDy\\ny2G3mKr4zDylXJL9jx7Be8iE+LeBEoHFm+MblU9t51uVgYYeuERzV5EunZ97ibA1\\nWEVCMm4pXPAlNYH85Y/+8VlYWJTd7J+zTBIJHiqutHVsVhPnYYyOacTtcYWW4apx\\nE1mo7XejticqTEYOEBpJpthG51DlEykrWMbOS3BldNqT3hfpZoks8PildzehYPgW\\nWvx6QqQDilT8bxqCDjU+w7e63h2CBnZ2ZT+g/73uxVzo+UkFwGFRY+tGrrNX7ROx\\npSbnp/2KBASc4tUDu7aZ4ZTPVfOOJU3M+SZBOr188YsyVoK7oRH4ECxJ4+iGi6FG\\ntOnZAPODo2wihs3StG3xAgMBAAGjggINMIICCTAOBgNVHQ8BAf8EBAMCBaAwHQYD\\nVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0O\\nBBYEFCI4dYHxu6vmKkVg1M/AEfxGJ1+DMB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJ\\nQOYfr52LFMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3Iz\\nLm8ubGVuY3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcv\\nMBgGA1UdEQQRMA+CDXMzLmRhcmtsYWIuY28wEwYDVR0gBAwwCjAIBgZngQwBAgEw\\nggECBgorBgEEAdZ5AgQCBIHzBIHwAO4AdQDatr9rP7W2Ip+bwrtca+hwkXFsu1GE\\nhTS9pD0wSNf7qwAAAYtvAoquAAAEAwBGMEQCIFHkuhRG3+uP8R+RysfDq/5hxVEW\\ns5/9V53Jtu2Lnbc2AiAWh/ZlolPo2o/gBQxvhXg+YzVNdw8U0apbBWLI8uipJAB1\\nADtTd3U+LbmAToswWwb+QDtn2E/D9Me9AA0tcm/h+tQXAAABi28CiucAAAQDAEYw\\nRAIgJNUQlaVIQG84JLSHKmc1pDWagOywiKhKvQkpmrHfiKcCIFjmfh6/ChupewKv\\nxhAlR7bRgpi5lfWl7VBPwNhA/0o7MA0GCSqGSIb3DQEBCwUAA4IBAQCEBCzfTc9g\\n/Go2oTxW7iLwvCfZOIQBcmMVF+bhUbZcVhxwnAKy3i/m59tyPHIKcGM7l2PL6Jbk\\nS8wJlsFFPUUvTwT56uYE8OEpQENXpO0QtxxDHiwN2fEIGMIzVQDWA5Ljderx0j7R\\noGdZBezv5C+BMWwmmjJwO0EDARFykZ6wXL5eieYoGKhclqymINWHiiHRUh/n9IOR\\nmBvOPHfowlYnCESLyXDiRcQixRuj5p8gSNNhNH/dPpdSJWDhv25oHHb4y61W91L0\\nPA/dXzNFvrNdOXeqXE+Wz15Rb19MwYE3WHbC0fvNoFd41xpSKavgKaNQiJW0goo5\\n8Mxo+S5mSsDS\\n-----END CERTIFICATE-----\\n\\n-----BEGIN CERTIFICATE-----\\nMIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw\\nTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\ncmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw\\nWhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg\\nRW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\\nAoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP\\nR5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx\\nsxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm\\nNHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg\\nZ3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG\\n/kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC\\nAYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB\\nAf8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA\\nFHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw\\nAoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw\\nOi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB\\ngt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W\\nPTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl\\nikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz\\nCkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm\\nlJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4\\navAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2\\nyJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O\\nyK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids\\nhCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+\\nHlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv\\nMldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX\\nnLRbwHOoq7hHwg==\\n-----END CERTIFICATE-----\\n\\n-----BEGIN CERTIFICATE-----\\nMIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/\\nMSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT\\nDkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1ow\\nTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\ncmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEB\\nAQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XC\\nov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpL\\nwYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+D\\nLtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK\\n4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5\\nbHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5y\\nsR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZ\\nXmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4\\nFQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBc\\nSLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2ql\\nPRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TND\\nTwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw\\nSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1\\nc3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx\\n+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEB\\nATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQu\\nb3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9E\\nU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26Ztu\\nMA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC\\n5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW\\n9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuG\\nWCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9O\\nhe8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFC\\nDfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5\\n-----END CERTIFICATE-----\\n\",\r\n        \"encrypted_ssl_private_key\": \"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\",\r\n        \"aes_key_encrypted\": \"kH7roH70D3jLoQaWnU9DU4gBB11qgRdK+AOX9wAvtCqa/KmZnp+Z1FnICBvX1/PLotEfefnqGJMmvVEnLiz677MW6K8+cfX3b6DojqkZTH0m6362I4wSn5GthRXZX7DI7AnWMqb54G2sKUqISMPHOZecUgYwQO5i2w8WQmBrM3V82W39FH9xdx8wTEcC1pLsulQJThgCFtpqsWwxHekJCLctpGTCS2o54LQcQ2eSY7ywfttcszC740sjO0GzAOExYkoXtgLVTl6AoUx+BQlmAETOobkqTjUCJwUbCBNyYvGzMTDdytRVceHIuUVQ7JkAVqXgb8ZfQyTlcTxcX/X+5g==\",\r\n        \"aes_key_customer_container\": null,\r\n        \"ssl_private_key_customer_container\": null\r\n    },\r\n    \"cname\": \"app540559.prod.cudawaas.com\",\r\n    \"sni_certificates\": [\r\n      {\r\n        \"name\": \"*.wildcard.com\",\r\n        \"use_automatic\": false,\r\n        \"ssl_certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIGOzCCBSOgAwIBAgIRAJQydeP1JIA904fD3m06MlcwDQYJKoZIhvcNAQELBQAw\\ngY8xCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO\\nBgNVBAcTB1NhbGZvcmQxGDAWBgNVBAoTD1NlY3RpZ28gTGltaXRlZDE3MDUGA1UE\\nAxMuU2VjdGlnbyBSU0EgRG9tYWluIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBD\\nQTAeFw0yMjEwMjEwMDAwMDBaFw0yMzExMjEyMzU5NTlaMBsxGTAXBgNVBAMMECou\\nZXVyb2RhdGFjYXIuZnIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDc\\nLaDesw6HPDyMSTmgGTOVOwcP82qPWPjFWNOc0FVN98QODKklAmLFUfPz1zjk+lgP\\n7WWEUaQJhaRFoW7RRdyuxLdbpwfvqythf83NmH9o2ucBkxzAPNS/Uz5nkSZwaaVa\\ngS++RFJTdabZAfU8YThcNYhHVpOMaCEhInmU8kHZAF0SvRqF1/f4KQRPyScSSazG\\neCCOujQuBv8XOX/d0r3SNAcf2waPQ+vA4/EoIHABKHR0FmiMUpc/urcemHRipFvu\\nOdVh1+X4F1emmPOPRtdWqIqlLH128YfRiwpjaqcypjR32yyZKAB9FjTz4DvwvQ0c\\nqW+6DAtJYbnyk8NHsftBAgMBAAGjggMDMIIC/zAfBgNVHSMEGDAWgBSNjF7EVK2K\\n4Xfpm/mbBeG4AY1h4TAdBgNVHQ4EFgQUocWsxF/L6hC3o3k35VFDCZ+nrj0wDgYD\\nVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0lBBYwFAYIKwYBBQUHAwEG\\nCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQECAgcwJTAjBggrBgEFBQcC\\nARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EMAQIBMIGEBggrBgEFBQcB\\nAQR4MHYwTwYIKwYBBQUHMAKGQ2h0dHA6Ly9jcnQuc2VjdGlnby5jb20vU2VjdGln\\nb1JTQURvbWFpblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJDQS5jcnQwIwYIKwYBBQUH\\nMAGGF2h0dHA6Ly9vY3NwLnNlY3RpZ28uY29tMCsGA1UdEQQkMCKCECouZXVyb2Rh\\ndGFjYXIuZnKCDmV1cm9kYXRhY2FyLmZyMIIBfwYKKwYBBAHWeQIEAgSCAW8EggFr\\nAWkAdgCt9776fP8QyIudPZwePhhqtGcpXc+xDCTKhYY069yCigAAAYP6ce/3AAAE\\nAwBHMEUCIQDKLkiUJgXTEOb13b4ObhCORQjMWkjLQ17dj100LyaZpQIgf/9UcOWe\\nMzEbly2YOMjtmWYHZCrIAKpjMW7vlmz9W98AdwB6MoxU2LcttiDqOOBSHumEFnAy\\nE4VNO9IrwTpXo1LrUgAAAYP6cfADAAAEAwBIMEYCIQCXXwEt1DorzQhqovt+fJE6\\nQoblK00IuRajdGRBmBRB0wIhAPXuf7GeeY7bVSd3Bs6dNgvSMD6C7BQs7/TictiX\\nefB0AHYA6D7Q2j71BjUy51covIlryQPTy9ERa+zraeF3fW0GvW4AAAGD+nHvyAAA\\nBAMARzBFAiBv0wO9WiIySQRuylj5e5GfbTrTXINFc0IZBvN2Hy/5MAIhAOyCbtG4\\nOM7784JXofU1aAPFB9m/FeJ+LJ8ffRdQmMYpMA0GCSqGSIb3DQEBCwUAA4IBAQBs\\nypPOZBmLkR4l0CtlsypBqnjsgyiF3qLbUzCqM8h8V/75+KCHu/EdjW/jpTvi2aOg\\nXG3hlh6yWcGxlptVX3M6KwFWHdRLbmMVLKH2OlIqaJCUzrpypLBBdNS0+Ol0W9dL\\nPf2fgru6KEKHCybMRKVWTaK1/IttcrsjrAB9Ux7aeO30xQ5X8lh5Erp7J4atzwdF\\nOmbNF+5UqqFgYrJ0nP6BuIMuMVezA0wLzPIyfsyKfVUYb3Zor0IgwkByM5SNBsUS\\n9RSP949k1NV+yYMrzbj22Xw93Y0cnJAbZLBrKcjBgKjqm0jH9DHZwTFacsLy3I9O\\nfj1eTuVxoRk2RDYCt8Pz\\n-----END CERTIFICATE-----\",\r\n        \"certificate_expiration\": \"2023-11-21T23:59:59Z\",\r\n        \"aes_key\": null,\r\n        \"aes_key_encrypted\": \"IYOjkG2zAKkVNtixN8A9/IYXf2BDkW3et2UveJsmWfMmCTvhgNRgRC4vaCE+y+b3k6dGB3tU8WzxtbdMZsRSwYUmqeVJneejDoYPuzjfmhgnaM1AH85vYRcSxdzRetsGFE55zXpDFtptTBOFGCM00kMnDgrtGkGlaxHmxPoep7dZOmgT21gLaNoTh1bICaMau9aqfnwk0yBE7g3hZx2sdIFxs5/TBEC004txVmFBr5L4eMZ713gd8J/oWtLmS29ZBZOtS/zDFJofT6ysl1QjnV/XPm5t1Ny4Q77AqZpNb92JZWwiaagIu1W/vHhRNhBH5v8a16zDt5MxERn1NvlJoQ==\",\r\n        \"ssl_private_key_customer_container\": null,\r\n        \"aes_key_customer_container\": null,\r\n        \"domains\": [\r\n          \"*.mydomain.com\"\r\n        ],\r\n        \"enable_container_secret\": false,\r\n        \"container_secret_ssl_certificate\": \"\",\r\n        \"container_secret_ssl_private_key\": \"\",\r\n        \"encrypted_ssl_private_key\": \"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\"\r\n      },\r\n      {\r\n        \"name\": \"string\",\r\n        \"use_automatic\": false,\r\n        \"ssl_certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIGPDCCBSSgAwIBAgIQOrPq70O/u18DFnIs8xfWgDANBgkqhkiG9w0BAQsFADCB\\njzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G\\nA1UEBxMHU2FsZm9yZDEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMTcwNQYDVQQD\\nEy5TZWN0aWdvIFJTQSBEb21haW4gVmFsaWRhdGlvbiBTZWN1cmUgU2VydmVyIENB\\nMB4XDTIyMDkwNTAwMDAwMFoXDTIzMTAwNjIzNTk1OVowGjEYMBYGA1UEAxMPc3lu\\nZXJnaWUtZWRjLmZyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArNZz\\nRgxzHspOygTwPj5ExD4jq98G/nP6qI3ifxC72dnYd+xgS+38ZgswE1ymehvKKv08\\nm8TbynI6aZnbs0J3TAoggXiKXT4kGzfdLviezTVyQCVlShCwr8vGgwtcXVFJLc8A\\nBVC9qHGrgqyVMNOlD0sveuwA5yYNGDEh3ZEEZt0uVoVCHotAdDl2gxTFqunZv4Is\\nJ5FLitAuFoUES27OLZsz40K306kFf2XnrUS1GpArhMzTuTw2dYDldLAHjpDxOk8c\\noxpw/Mz5UXhga0dQkor/Il3FzuHnELS7HsbQQ9QCjwQiFFBeMuhWJ4gMMD9Dhwds\\nex/em9Mi61JT88cqgQIDAQABo4IDBjCCAwIwHwYDVR0jBBgwFoAUjYxexFStiuF3\\n6Zv5mwXhuAGNYeEwHQYDVR0OBBYEFHHW5okScwutfPwkrPt3mq/vT/+KMA4GA1Ud\\nDwEB/wQEAwIFoDAMBgNVHRMBAf8EAjAAMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggr\\nBgEFBQcDAjBJBgNVHSAEQjBAMDQGCysGAQQBsjEBAgIHMCUwIwYIKwYBBQUHAgEW\\nF2h0dHBzOi8vc2VjdGlnby5jb20vQ1BTMAgGBmeBDAECATCBhAYIKwYBBQUHAQEE\\neDB2ME8GCCsGAQUFBzAChkNodHRwOi8vY3J0LnNlY3RpZ28uY29tL1NlY3RpZ29S\\nU0FEb21haW5WYWxpZGF0aW9uU2VjdXJlU2VydmVyQ0EuY3J0MCMGCCsGAQUFBzAB\\nhhdodHRwOi8vb2NzcC5zZWN0aWdvLmNvbTAvBgNVHREEKDAmgg9zeW5lcmdpZS1l\\nZGMuZnKCE3d3dy5zeW5lcmdpZS1lZGMuZnIwggF+BgorBgEEAdZ5AgQCBIIBbgSC\\nAWoBaAB1AK33vvp8/xDIi509nB4+GGq0Zyldz7EMJMqFhjTr3IKKAAABgwzxNc8A\\nAAQDAEYwRAIgUkZVYOiED8B+KEfVnqCZrtJgtfvlrk16bRKLx6AnAHgCID6oV8xr\\n34sfXk/wetwM779o0HQ6FledQBtzNrnZaWdHAHYAejKMVNi3LbYg6jjgUh7phBZw\\nMhOFTTvSK8E6V6NS61IAAAGDDPE1pwAABAMARzBFAiEA1YTS5t+r7idCzqxdDZk+\\nRvbz7teDm2RAegLbCveJzFgCIFlMX16h7TyRXUZ2rKJKJtv9NWCobVv76HYp4827\\nS3RpAHcA6D7Q2j71BjUy51covIlryQPTy9ERa+zraeF3fW0GvW4AAAGDDPE1cgAA\\nBAMASDBGAiEAuMwnxyZmGsvwtUtLZxx3cr3tR/ZNW3sXJCqNqXSQP5ACIQD2Kx7/\\nEfwdRJ+u5424fGhrqZBfvRHp+IM6SpQxNF0K0zANBgkqhkiG9w0BAQsFAAOCAQEA\\nh5nyvJlTFwDJ4x3iApsZdSdf2b9OGzydDgLEdUxXED7l4SNI5XZwE8MNVLpriXvY\\nF4yRNcFIDwpjYdwNoMa33neQnrc8DQ+s0Skm+JFtkG0HEKIwWIdqrb5X5UZAyte3\\n8IwoEQJwWWpUKRvWXwpfOsbchXA1qlHER/wIC7XvD8vw9QqguTlBdi4xpVIWdt8u\\nf4xibEgQW6A9XJaovpNQ8TAZakPNgevWiyFXUcUifmePTciKPc0ViAwdsVPhOvAz\\ng2DMkYid8P704PIWdcQnWeIAf3tcXBGMOLyRP/1sySZ0kqdt8d58kHJwHMzW56o4\\nS/nIWGO7LAyYudQ3UnxMdQ==\\n-----END CERTIFICATE-----\",\r\n        \"certificate_expiration\": \"2023-10-06T23:59:59Z\",\r\n        \"aes_key\": null,\r\n        \"aes_key_encrypted\": \"2Bl9mwkcJbwHKu+ZBH18NMQVgHou/zMipX3WZ7wxduTOvAO+QhEmkN8R/OrGoEOrbreUGx8WBTUG28Fij4xn1dGGfLA2k0tz6M6JY04ZMIPE7cyV7cpv5EBEpjdO9CpY0PMsEF38hDL1xtCqTwPUh8oz0rj68DM74T/1YfWd/6rR6+62b7W2XzMWI541OCm8BK0LzUD70WpDvr9qaU+2YJUez8CytiJh7fHGaI3uhSvasb3ISsZTZ+qJlvIB63kKAWYEn8UQ6n0kMlK3KoSgcti3Ksah5XTVTkF634yVO5wM5SpooDttJK59rvg6hN1/NNTaSQcS8IE7hUN3S2w3Vw==\",\r\n        \"ssl_private_key_customer_container\": null,\r\n        \"aes_key_customer_container\": null,\r\n        \"domains\": [\r\n          \"*.myotherdomain.com\"\r\n        ],\r\n        \"enable_container_secret\": false,\r\n        \"container_secret_ssl_certificate\": \"\",\r\n        \"container_secret_ssl_private_key\": \"\",\r\n        \"encrypted_ssl_private_key\": \"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\"\r\n      }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -801,15 +1241,15 @@
 			]
 		},
 		{
-			"name": "Roles",
+			"name": "JSON Security",
 			"item": [
 				{
-					"name": "Roles",
+					"name": "JSON Security",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/roles/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/json_security/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -820,7 +1260,102 @@
 							"path": [
 								"v4",
 								"waasapi",
-								"roles",
+								"applications",
+								"{{appName}}",
+								"json_security",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JWT Validation",
+			"item": [
+				{
+					"name": "JWT Validation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/jwt_validation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"jwt_validation",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Load Balancing",
+			"item": [
+				{
+					"name": "Load Balancing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/server_load_balancing/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"server_load_balancing",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locked Out Clients",
+			"item": [
+				{
+					"name": "Locked Out client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/blocked-ips/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"blocked-ips",
 								""
 							]
 						}
@@ -1104,6 +1639,37 @@
 			]
 		},
 		{
+			"name": "Response Pages",
+			"item": [
+				{
+					"name": "Response Pages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_page_component/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"response_page_component",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Response Rewrite",
 			"item": [
 				{
@@ -1305,6 +1871,237 @@
 			]
 		},
 		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/roles/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensitive Parameters",
+			"item": [
+				{
+					"name": "Sensitive Parameters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/sensitive_parameters/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"sensitive_parameters",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sensitive Parameters",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/sensitive_parameters/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"sensitive_parameters",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sensitive Parameters",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/sensitive_parameters/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"sensitive_parameters",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servers",
+			"item": [
+				{
+					"name": "Servers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"servers",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SNI Certificate",
+			"item": [
+				{
+					"name": "SNI Certificates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/sni_certificates/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"sni_certificates",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SNI Certificates",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/sni_certificates/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"sni_certificates",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Suspicious IPs",
+			"item": [
+				{
+					"name": "Suspicious IPs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/suspicious-ips/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"suspicious-ips",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Trusted Hosts",
 			"item": [
 				{
@@ -1383,6 +2180,37 @@
 			]
 		},
 		{
+			"name": "URL Access Redirects",
+			"item": [
+				{
+					"name": "URL Access Redirects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_access_redirects/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_access_redirects",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "URL Protection",
 			"item": [
 				{
@@ -1440,6 +2268,98 @@
 								"applications",
 								"{{appName}}",
 								"url_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "URL Translations",
+			"item": [
+				{
+					"name": "URL Translations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_translation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "URL Translations",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_translation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "URL Translations",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n      \"name\": \"cxp-gateway-v1\",\r\n      \"inside_prefix\": \"/cpx/v1\",\r\n      \"outside_prefix\": \"/hub\",\r\n      \"inside_domain\": \"api-gw.kubra.com\",\r\n      \"outside_domain\": \"api.kubra.com\",\r\n      \"comments\": \"This is an example URL translation rule\"\r\n    }\r\n  ],\r\n  \"is_enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_translation",
 								""
 							]
 						}
@@ -1775,98 +2695,6 @@
 					]
 				}
 			]
-		},
-		{
-			"name": "URL Translations",
-			"item": [
-				{
-					"name": "URL Translations",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"url_translation",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "URL Translations",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"url_translation",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "URL Translations",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"rules\": [\r\n    {\r\n      \"name\": \"cxp-gateway-v1\",\r\n      \"inside_prefix\": \"/cpx/v1\",\r\n      \"outside_prefix\": \"/hub\",\r\n      \"inside_domain\": \"api-gw.kubra.com\",\r\n      \"outside_domain\": \"api.kubra.com\",\r\n      \"comments\": \"This is an example URL translation rule\"\r\n    }\r\n  ],\r\n  \"is_enabled\": true\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_translation/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"url_translation",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
 		}
 	],
 	"auth": {
@@ -1874,7 +2702,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "420.YourKeyHere",
+				"value": "420.YourBearerTokenHere",
 				"type": "string"
 			}
 		]
