@@ -1,10 +1,7 @@
 {
 	"info": {
-		"_postman_id": "8dbf02ad-9646-4484-ab29-ccbbde9b376f",
-		"name": "WaaS API v4",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "10157885",
-		"_collection_link": "https://gold-flare-251534.postman.co/workspace/dev~9295dbb4-262d-4515-b0f3-3c8ddcd34d29/collection/10157885-8dbf02ad-9646-4484-ab29-ccbbde9b376f?action=share&source=collection_link&creator=10157885"
+		"name": "Barracuda WaaS API v4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -2693,6 +2690,246 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Applications",
+					"item": [
+						{
+							"name": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v2",
+										"waasapi",
+										"applications",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"applicationName\": \"example.com\",\r\n  \"backendPort\": 443,\r\n  \"useHttp\": true,\r\n  \"useExistingIp\": true,\r\n  \"backendIp\": \"93.184.216.34\",\r\n  \"maliciousTraffic\": \"Passive\",\r\n  \"serviceIp\": \"2.2.2.2\",\r\n  \"httpsServicePort\": 443,\r\n  \"redirectHTTP\": true,\r\n  \"useHttps\": true,\r\n  \"httpServicePort\": 80,\r\n  \"backendType\": \"HTTPS\",\r\n  \"serviceType\": \"HTTP\",\r\n  \"account_ips\": {},\r\n  \"hostnames\": [\r\n    {\r\n      \"hostname\": \"example.com\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v2",
+										"waasapi",
+										"applications",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Import and Export",
+			"item": [
+				{
+					"name": "Export",
+					"item": [
+						{
+							"name": "Export",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/compliance/?include_servers=true&include_endpoints=true",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"export",
+										"compliance",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "true"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export App Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/?include_servers=true&include_endpoints=true",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"export",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "true"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Import",
+					"item": [
+						{
+							"name": "Import App Config",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"request_limits\": {\r\n    \"max_request_length\": 65000,\r\n    \"max_request_line_length\": 8192,\r\n    \"max_url_length\": 8192,\r\n    \"max_query_length\": 8192,\r\n    \"max_number_of_cookies\": 50,\r\n    \"max_cookie_name_length\": 85,\r\n    \"max_number_of_headers\": 45,\r\n    \"max_header_name_length\": 80,\r\n    \"max_header_value_length\": 2048\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/example.com/import/?include_servers=true&include_endpoints=true",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"example.com",
+										"import",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "true"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Import App Config",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"request_limits\": {\r\n    \"max_request_length\": 65000,\r\n    \"max_request_line_length\": 8192,\r\n    \"max_url_length\": 8192,\r\n    \"max_query_length\": 8192,\r\n    \"max_number_of_cookies\": 50,\r\n    \"max_cookie_name_length\": 85,\r\n    \"max_number_of_headers\": 45,\r\n    \"max_header_name_length\": 80,\r\n    \"max_header_value_length\": 2048\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/example.com/import/?include_servers=false&include_endpoints=false",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"example.com",
+										"import",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "false"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
@@ -2702,7 +2939,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "420.YourBearerTokenHere",
+				"value": "YourBearertokenHere",
 				"type": "string"
 			}
 		]
