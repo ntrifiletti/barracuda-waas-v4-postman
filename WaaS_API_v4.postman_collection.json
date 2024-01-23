@@ -1,6 +1,6 @@
 {
 	"info": {
-		"name": "Barracuda WaaS API v4",
+		"name": "Barracuda Networks | WaaS API v4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -308,21 +308,50 @@
 			"name": "Attack Types",
 			"item": [
 				{
+					"name": "Attack Types Groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/groups/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"attack_types",
+								"groups",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Attack Types",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "247.ZYqp3bZ0dShPICwiZYyuQwWREbow6N6h",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"body": {
@@ -349,6 +378,87 @@
 								"applications",
 								"{{appName}}",
 								"attack_types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack Types Group Patterns",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/{{groupName}}/patterns/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"attack_types",
+								"{{groupName}}",
+								"patterns",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack Types Group Patterns",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/{{groupName}}/patterns/{{patternName}}/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"attack_types",
+								"{{groupName}}",
+								"patterns",
+								"{{patternName}}",
 								""
 							]
 						}
@@ -976,21 +1086,37 @@
 			"name": "Endpoints",
 			"item": [
 				{
-					"name": "Endpoints",
+					"name": "Endpoints All",
 					"request": {
-						"method": "PATCH",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ports\": [\r\n        {\r\n            \"protocol\": \"HTTPS\",\r\n            \"port\": 443,\r\n            \"waf_container_exposed_port\": null\r\n        },\r\n        {\r\n            \"protocol\": \"Redirect Service\",\r\n            \"port\": 80,\r\n            \"waf_container_exposed_port\": null,\r\n            \"is_permanent_redirect\": false\r\n        }\r\n    ],\r\n    \"domains\": [\r\n        \"www.darklab.co\"\r\n    ],\r\n    \"deployment\": {\r\n        \"primary\": \"centralus\",\r\n        \"secondary\": \"southcentralus\",\r\n        \"is_auto_region\": true,\r\n        \"third_location\": null,\r\n        \"redirect_dc_traffic_to_azure\": false,\r\n        \"is_dedicated_ip\": true\r\n    },\r\n    \"advanced\": {\r\n        \"session_timeout\": 60,\r\n        \"keepalive_requests\": 64,\r\n        \"ntlm_ignore_extra_data\": false,\r\n        \"enable_vdi\": false,\r\n        \"enable_http2\": false,\r\n        \"enable_websocket\": false,\r\n        \"enable_fingerprint\": true,\r\n        \"enable_web_application_firewall\": true,\r\n        \"enable_proxy_protocol\": false\r\n    },\r\n    \"https\": {\r\n        \"enable_tls_1\": false,\r\n        \"enable_tls_1_1\": false,\r\n        \"enable_tls_1_2\": true,\r\n        \"enable_tls_1_3\": true,\r\n        \"enable_ssl_3\": false,\r\n        \"cipher_suite_name\": \"custom\",\r\n        \"custom_ciphers\": [\r\n            \"ECDHE-ECDSA-AES128-GCM-SHA256\",\r\n            \"ECDHE-RSA-AES128-GCM-SHA256\",\r\n            \"ECDHE-ECDSA-AES256-GCM-SHA384\",\r\n            \"ECDHE-RSA-AES256-GCM-SHA384\",\r\n            \"ECDHE-ECDSA-CHACHA20-POLY1305\",\r\n            \"ECDHE-RSA-CHACHA20-POLY1305\",\r\n            \"DHE-RSA-AES128-GCM-SHA256\",\r\n            \"DHE-RSA-AES256-GCM-SHA384\",\r\n            \"DHE-RSA-CHACHA20-POLY1305\",\r\n            \"TLS_AES_128_GCM_SHA256\",\r\n            \"TLS_CHACHA20_POLY1305_SHA256\",\r\n            \"TLS_AES_256_GCM_SHA384\"\r\n        ],\r\n        \"enable_pfs\": false\r\n    },\r\n    \"certificate\": {\r\n        \"use_automatic\": true,\r\n        \"ssl_certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIE6DCCA9CgAwIBAgISAxO55umLLWOSiOfNW58zKZD+MA0GCSqGSIb3DQEBCwUA\\nMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD\\nEwJSMzAeFw0yMzA5MTIxNzU1NThaFw0yMzEyMTExNzU1NTdaMBkxFzAVBgNVBAMT\\nDnd3dy5kYXJrbGFiLmNvMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA\\nzjWPQPFXBAk7oV24bBFW9N18CBGiTMjqJ8pyDgtt6pl1Sx2JDoMH4/D6TsjhDRhv\\ncpBe0I7lzn2dJ/p6qafIj6VP6u6qycIR+3kGITotgJoxjzWkullsVVsx3g9Va+RY\\n27oEsEA31F8yNswuDRXu2lc+RVh+iMCkd5YdpFF2Oh4fpIUszZIADVuKR22jV6B9\\nr3frQ4Cd/sHgXIZ7jiWQ0Aglt7Iwaeqiy2HHDEvydXFARQVpsp/4MrnugWH9eEuf\\nZxxepPLlnFxB8G7DZ/XsQO/TZl2dE3ZfLaeLMugZ3+udrsO9g9yG6x/s1C+/DZnb\\nybwPO07hrlXJkrMlgnOwxwIDAQABo4ICDzCCAgswDgYDVR0PAQH/BAQDAgWgMB0G\\nA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1Ud\\nDgQWBBTVsPbpRbk5QfdNQW8IDYKZALMlVDAfBgNVHSMEGDAWgBQULrMXt1hWy65Q\\nCUDmH6+dixTCxjBVBggrBgEFBQcBAQRJMEcwIQYIKwYBBQUHMAGGFWh0dHA6Ly9y\\nMy5vLmxlbmNyLm9yZzAiBggrBgEFBQcwAoYWaHR0cDovL3IzLmkubGVuY3Iub3Jn\\nLzAZBgNVHREEEjAQgg53d3cuZGFya2xhYi5jbzATBgNVHSAEDDAKMAgGBmeBDAEC\\nATCCAQMGCisGAQQB1nkCBAIEgfQEgfEA7wB2ALc++yTfnE26dfI5xbpY9Gxd/ELP\\nep81xJ4dCYEl7bSZAAABiorAEtkAAAQDAEcwRQIgX9C+Kxg5igc+MXuD9nUytqL2\\nZ5F2nuO02WGFvpdH3JECIQCJmONuAkQOwGLs7fLi0lSKgGQoGLBWVE16JN537SIt\\n1QB1AK33vvp8/xDIi509nB4+GGq0Zyldz7EMJMqFhjTr3IKKAAABiorAExkAAAQD\\nAEYwRAIgOhINDoBaEqfjjGRwVgPTyo61HBTpzg0gWbTRkymIpg8CIEoVFoplCj63\\nHSfmsC2PO9zbWN7Bqt0gtDobpV3B7QfmMA0GCSqGSIb3DQEBCwUAA4IBAQBs8OAw\\n9lPZnzieERnFzQEbkbaSL9/GDDV+5zXdiwcfFySMkK81A+gDnhy8vxbkhXplqTqB\\nsLS+dFXSxvxaWe4Ahq7GO+hYqeF9nM7ZUAT6Ruo0P1LJk4ajLtcmltuNqfKvpfoW\\nBwEIvzS1PiK7FAjPTpWRcPxjnY6xQGCg77Q1Jf8GM+8xLuFZjugIWvE9vUjrmkcg\\n7oL9TsfzU4d2fg/d2kEnPlsEbvppzfI5BqoceV2+1HtPVVvetuHItXHIIvj9iQiC\\nwsW7B5+Gwy53zGboFeGxwzMjYoQk30OFAS0S8fYaSYmKcZraJkHfnppGBd17sEbZ\\nkLl4uQax4s3m9WvK\\n-----END CERTIFICATE-----\\n\\n-----BEGIN CERTIFICATE-----\\nMIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw\\nTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\ncmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw\\nWhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg\\nRW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK\\nAoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP\\nR5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx\\nsxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm\\nNHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg\\nZ3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG\\n/kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC\\nAYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB\\nAf8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA\\nFHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw\\nAoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw\\nOi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB\\ngt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W\\nPTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl\\nikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz\\nCkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm\\nlJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4\\navAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2\\nyJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O\\nyK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids\\nhCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+\\nHlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv\\nMldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX\\nnLRbwHOoq7hHwg==\\n-----END CERTIFICATE-----\\n\\n-----BEGIN CERTIFICATE-----\\nMIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/\\nMSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT\\nDkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1ow\\nTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh\\ncmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEB\\nAQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XC\\nov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpL\\nwYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+D\\nLtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK\\n4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5\\nbHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5y\\nsR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZ\\nXmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4\\nFQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBc\\nSLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2ql\\nPRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TND\\nTwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw\\nSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1\\nc3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx\\n+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEB\\nATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQu\\nb3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9E\\nU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26Ztu\\nMA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC\\n5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW\\n9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuG\\nWCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9O\\nhe8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFC\\nDfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5\\n-----END CERTIFICATE-----\",\r\n        \"encrypted_ssl_private_key\": \"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\",\r\n        \"aes_key_encrypted\": \"V4iiuOohtTnY44D59W/F31LJISLMqYWh5tY/+hVxoVkD+N0nERQ5SF3JG1s/DhXpWfbL1gYP8Zag1jL7EtLgUTh8nygZdmlcmH7mV8Zul6+nQk//7YczNdNbbzFAdKcdNxYwQUGi6oM+ZHrVlZq7V53D/jsh8/Mhq1iZoUUphMkCjJLVV4iO4CPlTZ+96ty82spcgKxFj7OrHNu2bXw7ulSo7vJC5HOOg7A7ZheAwWrlCrORkEylJ6l0LULe61E1GTENurtRRPx2x6gDNDdHdq/oFwRRagX0QalHx09BCoY394qPo7WM1kNcNmk4ZXmkZeCMzvlWH1OHN2ghW0JniQ==\",\r\n        \"aes_key_customer_container\": null,\r\n        \"ssl_private_key_customer_container\": null\r\n    },\r\n    \"cname\": \"app569658.prod.cudawaas.com\",\r\n    \"sni_certificates\": []\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/endpoints/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								""
+							]
+						},
+						"description": "Endpoints"
+					},
+					"response": []
+				},
+				{
+					"name": "Endpoints - Single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/endpoints",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -1003,16 +1129,14 @@
 								"waasapi",
 								"applications",
 								"{{appName}}",
-								"endpoints",
-								""
+								"endpoints"
 							]
-						},
-						"description": "Endpoints"
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "Endpoints - Custom Ciphers",
+					"name": "Endpoints",
 					"request": {
 						"method": "PATCH",
 						"header": [],
@@ -1084,37 +1208,21 @@
 					"response": []
 				},
 				{
-					"name": "Endpoints All",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								""
-							]
-						},
-						"description": "Endpoints"
-					},
-					"response": []
-				},
-				{
 					"name": "Endpoints Single",
 					"request": {
-						"method": "GET",
+						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ports\": [\r\n        {\r\n            \"protocol\": \"HTTPS\",\r\n            \"port\": 443,\r\n            \"waf_container_exposed_port\": 9000\r\n        },\r\n        {\r\n            \"protocol\": \"Redirect Service\",\r\n            \"port\": 80,\r\n            \"waf_container_exposed_port\": 9001,\r\n            \"is_permanent_redirect\": false\r\n        }\r\n    ],\r\n    \"domains\": [\r\n        \"test.darklab.co\"\r\n    ],\r\n    \"deployment\": {\r\n        \"primary\": null,\r\n        \"secondary\": null,\r\n        \"is_auto_region\": true,\r\n        \"third_location\": null,\r\n        \"redirect_dc_traffic_to_azure\": false,\r\n        \"is_dedicated_ip\": false\r\n    },\r\n    \"advanced\": {\r\n        \"session_timeout\": 60,\r\n        \"keepalive_requests\": 64,\r\n        \"ntlm_ignore_extra_data\": false,\r\n        \"enable_vdi\": false,\r\n        \"enable_http2\": false,\r\n        \"enable_websocket\": false,\r\n        \"enable_fingerprint\": true,\r\n        \"enable_web_application_firewall\": true,\r\n        \"enable_proxy_protocol\": \"Accept List\"\r\n    },\r\n    \"https\": {\r\n        \"enable_tls_1\": false,\r\n        \"enable_tls_1_1\": true,\r\n        \"enable_tls_1_2\": true,\r\n        \"enable_tls_1_3\": true,\r\n        \"enable_ssl_3\": false,\r\n        \"cipher_suite_name\": \"all\",\r\n        \"custom_ciphers\": [],\r\n        \"enable_pfs\": false\r\n    },\r\n    \"certificate\": {\r\n        \"use_automatic\": false,\r\n        \"ssl_certificate\": \"-----BEGIN CERTIFICATE-----\\nMIIGLzCCBRegAwIBAgIRAJiiUD6MRpm02IZgb00s3zYwDQYJKoZIhvcNAQELBQAw\\ngY8xCzAJBgNVBAYTAkdCMRswGQYDVQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAO\\nBgNVBAcTB1NhbGZvcmQxGDAWBgNVBAoTD1NlY3RpZ28gTGltaXRlZDE3MDUGA1UE\\nAxMuU2VjdGlnbyBSU0EgRG9tYWluIFZhbGlkYXRpb24gU2VjdXJlIFNlcnZlciBD\\nQTAeFw0yMzA0MTEwMDAwMDBaFw0yNDA0MTMyMzU5NTlaMBcxFTATBgNVBAMMDCou\\nZGFya2xhYi5jbzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMQVYU2b\\nkRxnxa/6cDsZpgVbFBISs+XBgmCadvwh30/UvkfjeJMUjjl49jUar8fxDCLFCGGM\\nk2hb4VzsumxXXMbaQoRNMq6eCIWFtvWqB/SVcOhXh64Tq2y0oIQrqwocUI2AVr64\\ntUB4xQ7sRliPly1zd25FzJp5ZFQWpdKAH2j/RhegEwTFSkzEsXLw6t4pe8NIGaZQ\\nOizOyTOYZWz/eNMLNcE171MH373oRuOVy1WLvL6C0d8/Vqjhyw7n/rltZT2ba9a8\\n/Q3fuVz/+ofXe4xFVxW47x9X4MTJXqN4fVL3G2PG39BwfJPePqRREFKPV/uc18N1\\nrwi+rZXnAGDNgYsCAwEAAaOCAvswggL3MB8GA1UdIwQYMBaAFI2MXsRUrYrhd+mb\\n+ZsF4bgBjWHhMB0GA1UdDgQWBBQHY/+kaSkqTxNbs9kgS8Cjinw/ODAOBgNVHQ8B\\nAf8EBAMCBaAwDAYDVR0TAQH/BAIwADAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYB\\nBQUHAwIwSQYDVR0gBEIwQDA0BgsrBgEEAbIxAQICBzAlMCMGCCsGAQUFBwIBFhdo\\ndHRwczovL3NlY3RpZ28uY29tL0NQUzAIBgZngQwBAgEwgYQGCCsGAQUFBwEBBHgw\\ndjBPBggrBgEFBQcwAoZDaHR0cDovL2NydC5zZWN0aWdvLmNvbS9TZWN0aWdvUlNB\\nRG9tYWluVmFsaWRhdGlvblNlY3VyZVNlcnZlckNBLmNydDAjBggrBgEFBQcwAYYX\\naHR0cDovL29jc3Auc2VjdGlnby5jb20wIwYDVR0RBBwwGoIMKi5kYXJrbGFiLmNv\\nggpkYXJrbGFiLmNvMIIBfwYKKwYBBAHWeQIEAgSCAW8EggFrAWkAdgB2/4g/Crb7\\nlVHCYcz1h7o0tKTNuyncaEIKn+ZnTFo6dAAAAYdxajLeAAAEAwBHMEUCIHpKXpUX\\n4Jz+7NGG4syMDVKBEH1vauZxxqsK8kRuHWYJAiEAkwEBupUfrZSJgsgsieQOUD90\\n229ANRPx1UU4et7HWdMAdgDatr9rP7W2Ip+bwrtca+hwkXFsu1GEhTS9pD0wSNf7\\nqwAAAYdxajM7AAAEAwBHMEUCIQC0JN+bc5ADYpv/Y+bmLvjiIDvlcXIgjyUjg9Ry\\nb3TWKQIgJd1M0XQBSnENLJx+JRHmgd12V7+c4beWPhcNOG/oGaUAdwDuzdBk1dsa\\nzsVct520zROiModGfLzs3sNRSFlGcR+1mwAAAYdxajMKAAAEAwBIMEYCIQDsIMAw\\nSq7GssRrooYj5oxk5gufcaaPvVIr2h5FDiFJYgIhAO7pe6tSJK68qCzlEi4L5AoO\\n/jKyuRFAdqOGBsZYEOlXMA0GCSqGSIb3DQEBCwUAA4IBAQDP/atixoOtE6bxxsau\\nQYvQwXuq5YsORaRm424OLiid0tjzdEvEN/b5dUGxK0JWl766MH1BIvnNMMjqrAB4\\n67PzVYfrSG90aALelKD04wApRpswj4IQ6EAJldErfgaT1lI4Yo6Zx0WeLuR8lJMX\\nGGi9D6shFffgeV7mjBV6NS6m3aHPEs1BXidkgP0UlotetLjDq+7vURH4jkYgsQKH\\nr4zlUjYMHuBs8niZBr7jN/oVSryvQIYl5DVpcIxLy7GGvB+40w1x5vIx4H1h5UEN\\nNmDdw13t4hz6q5/12IqK35u1NPIsQ8oHbH4IFtbivqzUis1YSvhaUVtDbv75UW7F\\nVCU0\\n-----END CERTIFICATE-----\",\r\n        \"encrypted_ssl_private_key\": \"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\",\r\n        \"aes_key_encrypted\": \"eTLuFwJgJe5KC0P4dcw1Kw0chRgrLCp3ERQRmry2rRMGLbDliPzDe9iviyo1f/5/CcreC3d5ISp4MV4p4W9I8CIQUapiVYHhamDAjanJnv4j+c0QqXdE/Xd1kNuuF6OIx3BtxYCh/uBPuGNYK2IrGIvVv3bJzAMoeT4/RN3mEoO23EOsVg1ihlbl7TbjQ8NNEbLbf2AozgSEIUk0lF1DUFXi9+mrvx7aRuZWyDadNv+7dQEb2FSWUaLEZFzMkZdS1/qs26noDND1M0lygpcN+/rDf73NCKJ0T3mKYf/drOCR8trnFM2+PKtffemkmRzbE4Ay4v5BkyYue0zCsVq3eA==\",\r\n        \"aes_key_customer_container\": \"v6LMlfWV3Di5IwPa+Ym4fHc70ERXMCU0/ZKURxUazWc0sfQbm49W91bxcWDioI7iPkTlk2MZw3zXGMCc8VidKhvomH9L5ry91AmItugN081tIg1pVterzwDdt6wTX+eblVCdYlE/8+Lnx7rQE1OGDvHdnwxK9wuSw9lWBKzS1s58jFaVHOGWo9tlAQ2eS/WAjgNugpJBdxq+fVxiui78QMglxtJX6PM79SdsbiRmtkkcfGaRJ+z+hPfO6ScByVzvomk1AbCOMgBlT/rlCQwr+5sYEV784jPGNay8SOGfJiqQCmGSWli79zmPFFAOa2KBXW7hF8kByF6r9MNgRrclig==\",\r\n        \"ssl_private_key_customer_container\": \"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\"\r\n    },\r\n    \"cname\": \"app48502.prod.cudawaas.com\",\r\n    \"sni_certificates\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/endpoints/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/test.darklab.co/endpoints/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -1126,7 +1234,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"{{appName}}",
+								"test.darklab.co",
 								"endpoints",
 								""
 							]
@@ -1168,6 +1276,184 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "Import and Export",
+			"item": [
+				{
+					"name": "Export",
+					"item": [
+						{
+							"name": "Export",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/compliance/?include_servers=true&include_endpoints=true",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"export",
+										"compliance",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "true"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export App Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/?include_servers=true&include_endpoints=true",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"export",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "true"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Import",
+					"item": [
+						{
+							"name": "Import App Config",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"request_limits\": {\r\n    \"max_request_length\": 65000,\r\n    \"max_request_line_length\": 8192,\r\n    \"max_url_length\": 8192,\r\n    \"max_query_length\": 8192,\r\n    \"max_number_of_cookies\": 50,\r\n    \"max_cookie_name_length\": 85,\r\n    \"max_number_of_headers\": 45,\r\n    \"max_header_name_length\": 80,\r\n    \"max_header_value_length\": 2048\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/example.com/import/?include_servers=true&include_endpoints=true",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"example.com",
+										"import",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "true"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Import App Config",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"request_limits\": {\r\n    \"max_request_length\": 65000,\r\n    \"max_request_line_length\": 8192,\r\n    \"max_url_length\": 8192,\r\n    \"max_query_length\": 8192,\r\n    \"max_number_of_cookies\": 50,\r\n    \"max_cookie_name_length\": 85,\r\n    \"max_number_of_headers\": 45,\r\n    \"max_header_name_length\": 80,\r\n    \"max_header_value_length\": 2048\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/example.com/import/?include_servers=false&include_endpoints=false",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"example.com",
+										"import",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "false"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},
@@ -1732,7 +2018,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=63072000; includeSubDomains; preload\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2695,7 +2981,7 @@
 					"name": "Applications",
 					"item": [
 						{
-							"name": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/",
+							"name": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/30064/",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -2725,7 +3011,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"applicationName\": \"example.com\",\r\n  \"backendPort\": 443,\r\n  \"useHttp\": true,\r\n  \"useExistingIp\": true,\r\n  \"backendIp\": \"93.184.216.34\",\r\n  \"maliciousTraffic\": \"Passive\",\r\n  \"serviceIp\": \"2.2.2.2\",\r\n  \"httpsServicePort\": 443,\r\n  \"redirectHTTP\": true,\r\n  \"useHttps\": true,\r\n  \"httpServicePort\": 80,\r\n  \"backendType\": \"HTTPS\",\r\n  \"serviceType\": \"HTTP\",\r\n  \"account_ips\": {},\r\n  \"hostnames\": [\r\n    {\r\n      \"hostname\": \"example.com\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"applicationName\": \"test.example.com\",\r\n  \"backendPort\": 443,\r\n  \"useHttp\": true,\r\n  \"useExistingIp\": true,\r\n  \"backendIp\": \"93.184.216.34\",\r\n  \"maliciousTraffic\": \"Passive\",\r\n  \"serviceIp\": \"2.2.2.2\",\r\n  \"httpsServicePort\": 443,\r\n  \"redirectHTTP\": true,\r\n  \"useHttps\": true,\r\n  \"httpServicePort\": 80,\r\n  \"backendType\": \"HTTPS\",\r\n  \"serviceType\": \"HTTP\",\r\n  \"account_ips\": {},\r\n  \"hostnames\": [\r\n    {\r\n      \"hostname\": \"test.example.com\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2756,180 +3042,31 @@
 			]
 		},
 		{
-			"name": "Import and Export",
+			"name": "Session Recording",
 			"item": [
 				{
-					"name": "Export",
-					"item": [
-						{
-							"name": "Export",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/compliance/?include_servers=true&include_endpoints=true",
-									"protocol": "https",
-									"host": [
-										"api",
-										"waas",
-										"barracudanetworks",
-										"com"
-									],
-									"path": [
-										"v4",
-										"waasapi",
-										"applications",
-										"{{appName}}",
-										"export",
-										"compliance",
-										""
-									],
-									"query": [
-										{
-											"key": "include_servers",
-											"value": "true"
-										},
-										{
-											"key": "include_endpoints",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Export App Config",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/?include_servers=true&include_endpoints=true",
-									"protocol": "https",
-									"host": [
-										"api",
-										"waas",
-										"barracudanetworks",
-										"com"
-									],
-									"path": [
-										"v4",
-										"waasapi",
-										"applications",
-										"{{appName}}",
-										"export",
-										""
-									],
-									"query": [
-										{
-											"key": "include_servers",
-											"value": "true"
-										},
-										{
-											"key": "include_endpoints",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"response": []
+					"name": "Session Recording",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/session_recording/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"session_recording",
+								""
+							]
 						}
-					]
-				},
-				{
-					"name": "Import",
-					"item": [
-						{
-							"name": "Import App Config",
-							"request": {
-								"method": "PATCH",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"request_limits\": {\r\n    \"max_request_length\": 65000,\r\n    \"max_request_line_length\": 8192,\r\n    \"max_url_length\": 8192,\r\n    \"max_query_length\": 8192,\r\n    \"max_number_of_cookies\": 50,\r\n    \"max_cookie_name_length\": 85,\r\n    \"max_number_of_headers\": 45,\r\n    \"max_header_name_length\": 80,\r\n    \"max_header_value_length\": 2048\r\n  }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/example.com/import/?include_servers=true&include_endpoints=true",
-									"protocol": "https",
-									"host": [
-										"api",
-										"waas",
-										"barracudanetworks",
-										"com"
-									],
-									"path": [
-										"v4",
-										"waasapi",
-										"applications",
-										"example.com",
-										"import",
-										""
-									],
-									"query": [
-										{
-											"key": "include_servers",
-											"value": "true"
-										},
-										{
-											"key": "include_endpoints",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Import App Config",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"request_limits\": {\r\n    \"max_request_length\": 65000,\r\n    \"max_request_line_length\": 8192,\r\n    \"max_url_length\": 8192,\r\n    \"max_query_length\": 8192,\r\n    \"max_number_of_cookies\": 50,\r\n    \"max_cookie_name_length\": 85,\r\n    \"max_number_of_headers\": 45,\r\n    \"max_header_name_length\": 80,\r\n    \"max_header_value_length\": 2048\r\n  }\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/example.com/import/?include_servers=false&include_endpoints=false",
-									"protocol": "https",
-									"host": [
-										"api",
-										"waas",
-										"barracudanetworks",
-										"com"
-									],
-									"path": [
-										"v4",
-										"waasapi",
-										"applications",
-										"example.com",
-										"import",
-										""
-									],
-									"query": [
-										{
-											"key": "include_servers",
-											"value": "false"
-										},
-										{
-											"key": "include_endpoints",
-											"value": "false"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
+					},
+					"response": []
 				}
 			]
 		}
@@ -2939,7 +3076,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "YourBearertokenHere",
+				"value": "YourBearerTokenHere",
 				"type": "string"
 			}
 		]
@@ -2973,6 +3110,10 @@
 		{
 			"key": "appProfileName",
 			"value": "root_star"
+		},
+		{
+			"key": "groupName",
+			"value": "test"
 		}
 	]
 }
