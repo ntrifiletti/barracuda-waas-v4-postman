@@ -2,6 +2,7 @@
 	"info": {
 		"name": "Barracuda Networks | WaaS API v4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+
 	},
 	"item": [
 		{
@@ -138,7 +139,7 @@
 			"name": "Applications",
 			"item": [
 				{
-					"name": "Applications",
+					"name": "Applications All",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -162,7 +163,7 @@
 					"response": []
 				},
 				{
-					"name": "Applications List",
+					"name": "Applications Endpoints",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -190,15 +191,27 @@
 			]
 		},
 		{
-			"name": "App Group",
+			"name": "App Group | XML Validation",
 			"item": [
 				{
 					"name": "XML Validation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/app_group_cc_container/xml_validation/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -210,21 +223,29 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"app_group_cc_container",
-								"xml_validation",
-								""
+								"{{app_group_name}}",
+								"xml_validation"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Datapath Options",
+					"name": "XML Validation",
 					"request": {
-						"method": "GET",
+						"method": "PATCH",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/datapath_options/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -235,8 +256,368 @@
 							"path": [
 								"v4",
 								"waasapi",
-								"applications",
-								"{{appName}}",
+								"app_groups",
+								"{{app_group_name}}",
+								"xml_validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XML Validation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"max_tree_depth\": 20,\r\n  \"max_element_name_length\": 64,\r\n  \"max_tree_elements\": 10000,\r\n  \"max_element_children\": 100,\r\n  \"max_element_attributes\": 32,\r\n  \"max_attribute_name_length\": 64,\r\n  \"max_attribute_value_length\": 1024,\r\n  \"max_cdata_size\": 1024,\r\n  \"max_document_size\": \"16K\",\r\n  \"min_document_size\": \"4\",\r\n  \"block_processing_instructions\": true,\r\n  \"block_dtd\": true,\r\n  \"block_external_entities\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"xml_validation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | SOAP Validations",
+			"item": [
+				{
+					"name": "SOAP Validation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/soap_validations/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"soap_validations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP Validations",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"validate_soap_envelope\": true,\r\n    \"validate_soap_headers\": true,\r\n    \"allow_additional_soap_headers\": true,\r\n    \"validate_soap_body\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/soap_validations/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"soap_validations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP Validation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"validate_soap_envelope\": true,\r\n    \"validate_soap_headers\": true,\r\n    \"allow_additional_soap_headers\": true,\r\n    \"validate_soap_body\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/soap_validations/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"soap_validations",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | WSI Profile",
+			"item": [
+				{
+					"name": "WSI Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/wsi_profile/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"wsi_profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WSI Profile",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/wsi_profile/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"wsi_profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "WSI Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/wsi_profile/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"wsi_profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | Datapath Options",
+			"item": [
+				{
+					"name": "Datapath Options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/datapath_options/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"datapath_options",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Datapath Options",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/datapath_options/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"datapath_options",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Datapath Options",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"max_tree_depth\": 20,\r\n  \"max_element_name_length\": 64,\r\n  \"max_tree_elements\": 10000,\r\n  \"max_element_children\": 100,\r\n  \"max_element_attributes\": 32,\r\n  \"max_attribute_name_length\": 64,\r\n  \"max_attribute_value_length\": 1024,\r\n  \"max_cdata_size\": 1024,\r\n  \"max_document_size\": \"16K\",\r\n  \"min_document_size\": \"4\",\r\n  \"block_processing_instructions\": true,\r\n  \"block_dtd\": true,\r\n  \"block_external_entities\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/datapath_options/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
 								"datapath_options",
 								""
 							]
@@ -2981,7 +3362,7 @@
 					"name": "Applications",
 					"item": [
 						{
-							"name": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/30064/",
+							"name": "Applications",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -3005,7 +3386,7 @@
 							"response": []
 						},
 						{
-							"name": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/",
+							"name": "Create Application",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -3067,6 +3448,45 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Session Recording Stop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/session_recording/?action=stop",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"session_recording",
+								""
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "stop"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
@@ -3114,6 +3534,10 @@
 		{
 			"key": "groupName",
 			"value": "test"
+		},
+		{
+			"key": "app_group_name",
+			"value": "Production"
 		}
 	]
 }
