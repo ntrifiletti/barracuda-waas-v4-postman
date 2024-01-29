@@ -22,6 +22,12 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 5. Postman | Click Send to initiate API calls.
 6. Postman |Verify the Response Body and Status Codes for succesful transactions.
 
+## Security Hardening
+1. Postman | Import the security hardending json collection and import into your Postman
+2. Modify the Authorization and Variable to point to your target WaaS Application name
+3. Postman | Right click on the Top-level folder PATCH and Run Collection on target
+4. The API calls will automatically security harden the application for optimized protection. 
+
 ## Useful Tips
 The authorization and variables will need to be configured specific to your Postman environments!
 Please restart your Postman client if Authorization token does not allow you access. 
