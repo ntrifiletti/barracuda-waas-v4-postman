@@ -1,15 +1,15 @@
 ## Barracuda Web-Application-Firewall-as-a-Service (WaaS)
 ## Postman | API REST v4 Collection ##
 ## Introduction
-The WaaS_API_v4.postman_collection.json template in this repository is pre-loaded with documented REST v4 API calls and verbs for GET, POST, PATCH, DEL and other various functions for complete API management. 
+The WaaS_API_v4.postman_collection.json template in this repository is pre-loaded with documented REST v4 API calls for the Barracuda WAF-as-a-Service platform (Waas).
 
-These templates are useful when building,testing and publishing API calls related to Barracuda Waas API Version 4 OpenAPI Spec. 
+These templates are useful when building,testing and publishing API v4 calls related to Barracuda Waas APIs. The current "Swagger" spec is OAS3.0. 
 
 Additional API documentation can be found on the [Barracuda Swagger/OpenAPI Spec v4 Website](https://api.waas.barracudanetworks.com/v4/swagger/#/)
 
 ![image](https://github.com/ntrifiletti/waas-postman/assets/60154709/d7afc92f-ca47-405f-bffc-602a6f339e8d)
 
-## Install Postman or use Web-based Version
+## Install Postman client or use the free web-based version
 What is Postman? 
 Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster.
 [Postman Website Download ](https://www.postman.com/downloads/)
@@ -20,7 +20,11 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 3. Click Import as Copy (Recommended) to create the Collection. 
 4. Postman | Navigate to the Top-level of the Collection Overview tabs and [change your Authorization type](https://learning.postman.com/docs/sending-requests/authorization/specifying-authorization-details) and [variables](https://learning.postman.com/docs/sending-requests/variables/) to match your Waas API environment.
 5. Postman | Click Send to initiate API calls.
-6. Postman |Verify the Response Body and Status Codes for succesful transactions. 
+6. Postman |Verify the Response Body and Status Codes for succesful transactions.
+
+## Useful Tips
+The authorization and variables will need to be configured specific to your Postman environments!
+Please restart your Postman client if Authorization token does not allow you access. 
 
 
 
