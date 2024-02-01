@@ -28,6 +28,12 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 3. Postman | Right click on the Top-level folder PATCH and Run Collection on target
 4. The API calls will automatically security harden the application for optimized protection. 
 
+## Security Hardening
+1. Import the JSON and Web sample attacks collection into Postman
+2. Modify the Authorization and Variable to point to your target WaaS Application name
+3. Postman | Right click on the Top-level folder and Run Collection on target
+4. The API calls will automatically generate OWASP10 and API10 attacks. 
+
 ## Useful Tips
 The authorization and variables will need to be configured specific to your Postman environments!
 Please restart your Postman client if Authorization token does not allow you access. 
