@@ -8,6 +8,8 @@ These templates are useful when building,testing and publishing API v4 calls rel
 Additional API documentation can be found on the [Barracuda Swagger/OpenAPI Spec v4 Website](https://api.waas.barracudanetworks.com/v4/swagger/#/)
 
 ![image](https://github.com/ntrifiletti/waas-postman/assets/60154709/d7afc92f-ca47-405f-bffc-602a6f339e8d)
+![image](https://github.com/ntrifiletti/barracuda-waas-v4-postman/assets/60154709/99ff3d81-3c83-4960-8c2e-77dd6d80397e)
+
 
 ## Install Postman client or use the free web-based version
 What is Postman? 
@@ -37,7 +39,7 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 ## Useful Tips
 The authorization and variables will need to be configured specific to your Postman environments!
 Please restart your Postman client if Authorization token does not allow you access. 
-![image](https://github.com/ntrifiletti/barracuda-waas-v4-postman/assets/60154709/b96c2c0c-3506-4913-8223-0c343b87116e)
+
 
 
 
