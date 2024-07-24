@@ -1,8 +1,11 @@
 {
 	"info": {
+		"_postman_id": "8dbf02ad-9646-4484-ab29-ccbbde9b376f",
 		"name": "Barracuda Networks | WaaS API v4",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-
+		"description": "[https://api.waas.barracudanetworks.com/v4/swagger/#/](https://api.waas.barracudanetworks.com/v4/swagger/#/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10157885",
+		"_collection_link": "https://gold-flare-251534.postman.co/workspace/dev~9295dbb4-262d-4515-b0f3-3c8ddcd34d29/collection/10157885-8dbf02ad-9646-4484-ab29-ccbbde9b376f?action=share&source=collection_link&creator=10157885"
 	},
 	"item": [
 		{
@@ -1012,32 +1015,6 @@
 				{
 					"name": "Blocked Bots",
 					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/blocked_bots/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"blocked_bots",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Blocked Bots",
-					"request": {
 						"method": "PUT",
 						"header": [],
 						"url": {
@@ -1111,7 +1088,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n    \"enabled\": true,\r\n    \"caching_enabled\": true,\r\n    \"compression_enabled\": true,\r\n    \"file_extensions\": [\r\n        \"bmp\",\r\n        \"css\",\r\n        \"gif\",\r\n        \"ico\",\r\n        \"jar\",\r\n        \"jpeg\",\r\n        \"jpg\",\r\n        \"js\",\r\n        \"jsp\",\r\n        \"pdf\",\r\n        \"png\",\r\n        \"swf\",\r\n        \"tif\"\r\n    ],\r\n    \"caching_max_size\": 256,\r\n    \"caching_min_size\": 256,\r\n    \"ignore_request_headers\": false,\r\n    \"ignore_response_headers\": false,\r\n    \"cache_negative_responses\": false,\r\n    \"expiry_age\": 60,\r\n    \"content_types\": [\r\n    \"image/jpeg\",\r\n    \"image/gif\",\r\n    \"image/png\",\r\n    \"text/html\",\r\n    \"image/webp\",\r\n    \"image/svg+xml\"\r\n    ],\r\n    \"compression_min_size\": 100,\r\n    \"compress_unknown_content_types\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1661,6 +1638,37 @@
 			]
 		},
 		{
+			"name": "Header Allow/Deny",
+			"item": [
+				{
+					"name": "Header Allow/Deny",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/headers_allow_deny/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"headers_allow_deny",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Import and Export",
 			"item": [
 				{
@@ -2001,7 +2009,7 @@
 			"name": "Locked Out Clients",
 			"item": [
 				{
-					"name": "Locked Out client",
+					"name": "Locked Out Client IP",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -2399,7 +2407,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=63072000; includeSubDomains; preload\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=63072000; includeSubDomains; preload\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src 'self'; script-src 'self'; img-src 'self'; style-src 'self'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2428,13 +2436,48 @@
 					"response": []
 				},
 				{
-					"name": "PCI DSS 4",
+					"name": "CSP + HSTS Beta",
 					"request": {
 						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src: 'self';object-src: 'self'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=63072000; includeSubDomains; preload\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline';\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"response_rewrite",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HSTS Header",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    }\r\n\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2504,7 +2547,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src:'none';object-src:'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    },\r\n    {\r\n        \"name\": \"privacy\",\r\n        \"sequence_number\": 3,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Feature-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"camera 'none';microphone 'none';geolocation 'none';encrypted-media 'none';payment 'none';speaker 'none';usb 'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for Browser privacy features.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
+							"raw": "{\r\n  \"rules\": [\r\n    {\r\n        \"name\": \"hsts\",\r\n        \"sequence_number\": 1,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Strict-Transport-Security\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"max-age=31536000; includeSubDomains\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for HSTS enforcement.\"\r\n    },\r\n    {\r\n        \"name\": \"csp\",\r\n        \"sequence_number\": 2,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Content-Security-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"default-src * data: mediastream: blob: filesystem: about: ws: wss: 'unsafe-eval' 'wasm-unsafe-eval' 'unsafe-inline'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for CSP.\"\r\n    },\r\n    {\r\n        \"name\": \"privacy\",\r\n        \"sequence_number\": 3,\r\n        \"action\": \"Insert Header\",\r\n        \"header\": \"Feature-Policy\",\r\n        \"old_value\": \"*\",\r\n        \"rewrite_value\": \"camera 'none';microphone 'none';geolocation 'none';encrypted-media 'none';payment 'none';speaker 'none';usb 'none'\",\r\n        \"condition\": \"*\",\r\n        \"continue_processing\": true,\r\n        \"comments\": \"This header insert is for Browser privacy features.\"\r\n    }\r\n  ],\r\n  \"enabled\": \"true\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2512,7 +2555,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/www.example.com/response_rewrite/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_rewrite/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -2524,7 +2567,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"www.example.com",
+								"{{appName}}",
 								"response_rewrite",
 								""
 							]
@@ -2678,6 +2721,74 @@
 			]
 		},
 		{
+			"name": "Session Recording",
+			"item": [
+				{
+					"name": "Session Recording",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/session_recording/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"session_recording",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Session Recording Stop",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/session_recording/?action=stop",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"session_recording",
+								""
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "stop"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "SNI Certificate",
 			"item": [
 				{
@@ -2757,6 +2868,84 @@
 								"applications",
 								"{{appName}}",
 								"suspicious-ips",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear All Suspicious IPs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/suspicious-ips/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"suspicious-ips",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suspicious FPs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/blocked-fps/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"blocked-fps",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear All IP FP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/all-blocked-ips-fps/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"all-blocked-ips-fps",
 								""
 							]
 						}
@@ -2866,6 +3055,37 @@
 								"applications",
 								"{{appName}}",
 								"url_access_redirects",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "URL Normalization",
+			"item": [
+				{
+					"name": "URL Normalization",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_normalization/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_normalization",
 								""
 							]
 						}
@@ -3227,7 +3447,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/8623/endpoints/10260/",
+									"raw": "https://api.waas.barracudanetworks.com/v2/waasapi/applications/8623/endpoints/31127/",
 									"protocol": "https",
 									"host": [
 										"api",
@@ -3241,7 +3461,7 @@
 										"applications",
 										"8623",
 										"endpoints",
-										"10260",
+										"31127",
 										""
 									]
 								}
@@ -3392,7 +3612,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"applicationName\": \"test.example.com\",\r\n  \"backendPort\": 443,\r\n  \"useHttp\": true,\r\n  \"useExistingIp\": true,\r\n  \"backendIp\": \"93.184.216.34\",\r\n  \"maliciousTraffic\": \"Passive\",\r\n  \"serviceIp\": \"2.2.2.2\",\r\n  \"httpsServicePort\": 443,\r\n  \"redirectHTTP\": true,\r\n  \"useHttps\": true,\r\n  \"httpServicePort\": 80,\r\n  \"backendType\": \"HTTPS\",\r\n  \"serviceType\": \"HTTP\",\r\n  \"account_ips\": {},\r\n  \"hostnames\": [\r\n    {\r\n      \"hostname\": \"test.example.com\"\r\n    }\r\n  ]\r\n}",
+									"raw": "{\r\n  \"applicationName\": \"www.example.com\",\r\n  \"backendPort\": 443,\r\n  \"useHttp\": true,\r\n  \"useExistingIp\": true,\r\n  \"backendIp\": \"93.184.216.34\",\r\n  \"maliciousTraffic\": \"Passive\",\r\n  \"serviceIp\": \"2.2.2.2\",\r\n  \"httpsServicePort\": 443,\r\n  \"redirectHTTP\": true,\r\n  \"useHttps\": true,\r\n  \"httpServicePort\": 80,\r\n  \"backendType\": \"HTTPS\",\r\n  \"serviceType\": \"HTTP\",\r\n  \"account_ips\": {},\r\n  \"hostnames\": [\r\n    {\r\n      \"hostname\": \"www.example.com\"\r\n    }\r\n  ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3423,15 +3643,15 @@
 			]
 		},
 		{
-			"name": "Session Recording",
+			"name": "Web Scraping",
 			"item": [
 				{
-					"name": "Session Recording",
+					"name": "Web Scraping",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/session_recording/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/web_scraping/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -3442,7 +3662,9 @@
 							"path": [
 								"v4",
 								"waasapi",
-								"session_recording",
+								"applications",
+								"{{appName}}",
+								"web_scraping",
 								""
 							]
 						}
@@ -3450,21 +3672,12 @@
 					"response": []
 				},
 				{
-					"name": "Session Recording Stop",
+					"name": "Web Scraping Policies",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/session_recording/?action=stop",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/web_scraping/policies/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -3475,14 +3688,11 @@
 							"path": [
 								"v4",
 								"waasapi",
-								"session_recording",
+								"applications",
+								"{{appName}}",
+								"web_scraping",
+								"policies",
 								""
-							],
-							"query": [
-								{
-									"key": "action",
-									"value": "stop"
-								}
 							]
 						}
 					},
@@ -3496,7 +3706,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "YourBearerTokenHere",
+				"value": "296.8o0YKA1B5iYUpH8vosSxr25X2TWkpYB3",
 				"type": "string"
 			}
 		]
@@ -3524,7 +3734,7 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "www.example.com",
+			"value": "www.darklab.co",
 			"type": "string"
 		},
 		{
