@@ -2,10 +2,7 @@
 	"info": {
 		"_postman_id": "8dbf02ad-9646-4484-ab29-ccbbde9b376f",
 		"name": "Barracuda Networks | WaaS API v4",
-		"description": "[https://api.waas.barracudanetworks.com/v4/swagger/#/](https://api.waas.barracudanetworks.com/v4/swagger/#/)",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "10157885",
-		"_collection_link": "https://gold-flare-251534.postman.co/workspace/dev~9295dbb4-262d-4515-b0f3-3c8ddcd34d29/collection/10157885-8dbf02ad-9646-4484-ab29-ccbbde9b376f?action=share&source=collection_link&creator=10157885"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -1150,6 +1147,41 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Compression Vercel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"enabled\": true,\r\n    \"caching_enabled\": false,\r\n    \"compression_enabled\": true,\r\n    \"file_extensions\": [],\r\n    \"caching_max_size\": 256,\r\n    \"caching_min_size\": 256,\r\n    \"ignore_request_headers\": false,\r\n    \"ignore_response_headers\": false,\r\n    \"cache_negative_responses\": false,\r\n    \"expiry_age\": 60,\r\n    \"content_types\": [\r\n        \"image/webp\",\r\n        \"image/svg+xml\",\r\n        \"application/json\",\r\n        \"application/x-web-app-manifest+json\",\r\n        \"application/geo+json\",\r\n        \"application/manifest+json\",\r\n        \"application/ld+json\",\r\n        \"application/atom+xml\",\r\n        \"application/rss+xml\",\r\n        \"application/xhtml+xml\",\r\n        \"application/xml\",\r\n        \"application/rdf+xml\",\r\n        \"application/javascript\",\r\n        \"application/vnd.ms-fontobject\",\r\n        \"application/wasm\",\r\n        \"font/otf\",\r\n        \"text/html\",\r\n        \"text/cache-manifest\",\r\n        \"text/css\",\r\n        \"text/dns\",\r\n        \"text/javascript\",\r\n        \"text/plain\",\r\n        \"text/markdown\",\r\n        \"text/vcard\",\r\n        \"text/calendar\",\r\n        \"text/vnd.rim.location.xloc\",\r\n        \"text/vtt\",\r\n        \"text/x-component\",\r\n        \"text/x-cross-domain-policy\"\r\n    ],\r\n    \"compression_min_size\": 100,\r\n    \"compress_unknown_content_types\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/caching_and_compression/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"caching_and_compression",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1177,6 +1209,58 @@
 								"{{appName}}",
 								"cdn",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CDN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cdn/purge",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cdn",
+								"purge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CDN Rules",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cdn/rules",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cdn",
+								"rules"
 							]
 						}
 					},
@@ -3699,6 +3783,104 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Snapshots",
+			"item": [
+				{
+					"name": "Snapshots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/snapshots/?page=1&itemsPerPage=10&type=all",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"snapshots",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Snapshots",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"type\": \"manual\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/snapshots/?page=1&itemsPerPage=10&type=all",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"snapshots",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "XML Protection",
+			"item": []
 		}
 	],
 	"auth": {
@@ -3706,7 +3888,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "YOUR.BEARER.TOKEN.HERE",
+				"value": "Your.Bearer.Token.Here",
 				"type": "string"
 			}
 		]
@@ -3734,7 +3916,7 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "www.darklab.co",
+			"value": "www.example.com",
 			"type": "string"
 		},
 		{
