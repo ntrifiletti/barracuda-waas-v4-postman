@@ -191,10 +191,10 @@
 			]
 		},
 		{
-			"name": "App Group | XML Validation",
+			"name": "App Group | App Group",
 			"item": [
 				{
-					"name": "XML Validation",
+					"name": "App Groups",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -211,7 +211,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -223,17 +223,57 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
-								"xml_validation"
+								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "XML Validation",
+					"name": "App Groups",
 					"request": {
-						"method": "PATCH",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"appGroupNameHere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | AppGroup Details",
+			"item": [
+				{
+					"name": "App Groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -245,7 +285,203 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App Groups",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"features\": {},\r\n  \"is_default\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "App Groups",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"appGroupNameHere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | Attackdef Settings",
+			"item": [
+				{
+					"name": "Attack Def Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/attack_def_settings/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"attack_def_settings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack Def Settings",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"current_version\": \"1.233\",\r\n    \"prev_version\": \"1.233\",\r\n    \"latest_version\": \"1.233\",\r\n    \"auto_upgrade\": false,\r\n    \"default_mode_for_new_patterns\": \"Active\",\r\n    \"default_mode_for_updated_patterns\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/attack_def_settings/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"attack_def_settings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack Def Settings",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"current_version\": \"1.233\",\r\n    \"prev_version\": \"1.233\",\r\n    \"latest_version\": \"1.233\",\r\n    \"auto_upgrade\": false,\r\n    \"default_mode_for_new_patterns\": \"Active\",\r\n    \"default_mode_for_updated_patterns\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/attack_def_settings/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"attack_def_settings",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | Datapath Options",
+			"item": [
+				{
+					"name": "Datapath Options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/datapath_options/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -258,14 +494,50 @@
 								"waasapi",
 								"app_groups",
 								"{{app_group_name}}",
-								"xml_validation"
+								"datapath_options",
+								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "XML Validation",
+					"name": "Datapath Options",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/datapath_options/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"datapath_options",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Datapath Options",
 					"request": {
 						"method": "PUT",
 						"header": [],
@@ -279,7 +551,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/datapath_options/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -291,8 +563,9 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
-								"xml_validation"
+								"{{app_groups_name}}",
+								"datapath_options",
+								""
 							]
 						}
 					},
@@ -414,6 +687,116 @@
 			]
 		},
 		{
+			"name": "App Group | XML Validation",
+			"item": [
+				{
+					"name": "XML Validation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"xml_validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XML Validation",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"xml_validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "XML Validation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"max_tree_depth\": 20,\r\n  \"max_element_name_length\": 64,\r\n  \"max_tree_elements\": 10000,\r\n  \"max_element_children\": 100,\r\n  \"max_element_attributes\": 32,\r\n  \"max_attribute_name_length\": 64,\r\n  \"max_attribute_value_length\": 1024,\r\n  \"max_cdata_size\": 1024,\r\n  \"max_document_size\": \"16K\",\r\n  \"min_document_size\": \"4\",\r\n  \"block_processing_instructions\": true,\r\n  \"block_dtd\": true,\r\n  \"block_external_entities\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_group_name}}",
+								"xml_validation"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "App Group | WSI Profile",
 			"item": [
 				{
@@ -518,107 +901,6 @@
 								"app_groups",
 								"{{app_group_name}}",
 								"wsi_profile",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "App Group | Datapath Options",
-			"item": [
-				{
-					"name": "Datapath Options",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/datapath_options/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"app_groups",
-								"{{app_group_name}}",
-								"datapath_options",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Datapath Options",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/datapath_options/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"app_groups",
-								"{{app_group_name}}",
-								"datapath_options",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Datapath Options",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"max_tree_depth\": 20,\r\n  \"max_element_name_length\": 64,\r\n  \"max_tree_elements\": 10000,\r\n  \"max_element_children\": 100,\r\n  \"max_element_attributes\": 32,\r\n  \"max_attribute_name_length\": 64,\r\n  \"max_attribute_value_length\": 1024,\r\n  \"max_cdata_size\": 1024,\r\n  \"max_document_size\": \"16K\",\r\n  \"min_document_size\": \"4\",\r\n  \"block_processing_instructions\": true,\r\n  \"block_dtd\": true,\r\n  \"block_external_entities\": true\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/datapath_options/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"app_groups",
-								"{{app_group_name}}",
-								"datapath_options",
 								""
 							]
 						}
@@ -957,6 +1239,41 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers_connectivity/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"servers_connectivity",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Backend Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"server_ids\": [\r\n    0\r\n  ],\r\n  \"test_all\": false,\r\n  \"update_test_parameters\": false,\r\n  \"additional_test_inputs\": {\r\n    \"oob_health_check_interval\": 10,\r\n    \"healthcheck_http_request_url\": \"/\",\r\n    \"healthcheck_method\": \"GET\",\r\n    \"healthcheck_additional_headers\": \"string\",\r\n    \"healthcheck_status_code\": 200,\r\n    \"healthcheck_match_content_string\": \"string\",\r\n    \"healthcheck_domain\": \"string\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers_connectivity/",
 							"protocol": "https",
@@ -1525,6 +1842,37 @@
 			]
 		},
 		{
+			"name": "DNS Zones",
+			"item": [
+				{
+					"name": "DNS Zones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/dns_zones/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"dns_zones",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Endpoints",
 			"item": [
 				{
@@ -1726,9 +2074,56 @@
 			"item": [
 				{
 					"name": "Header Allow/Deny",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"enabled\": true,\r\n            \"active\": true,\r\n            \"name\": \"log4j_all_header_protection\",\r\n            \"header_name\": \"*\",\r\n            \"max_header_value_length\": null,\r\n            \"denied_metacharacters\": \"%7f\",\r\n            \"block_sql_injection\": false,\r\n            \"block_os_command_injection\": true,\r\n            \"block_directory_traversal\": false,\r\n            \"block_cross_site_scripting\": false,\r\n            \"block_remote_file_inclusion\": false,\r\n            \"block_sql_injection_strict\": false,\r\n            \"block_os_command_injection_strict\": false,\r\n            \"block_directory_traversal_strict\": false,\r\n            \"block_cross_site_scripting_strict\": false,\r\n            \"block_remote_file_inclusion_strict\": false,\r\n            \"block_ldap_injection\": false,\r\n            \"block_python_php_attacks\": false,\r\n            \"block_http_specific_injection\": false,\r\n            \"block_apache_struts_attacks\": false,\r\n            \"block_apache_struts_attacks_strict\": false,\r\n            \"comments\": null,\r\n            \"exception_patterns\": [],\r\n            \"custom_blocked_attack_type_groups\": []\r\n        },\r\n        {\r\n            \"enabled\": true,\r\n            \"active\": true,\r\n            \"name\": \"log4j_cookie_protection\",\r\n            \"header_name\": \"cookie\",\r\n            \"max_header_value_length\": null,\r\n            \"denied_metacharacters\": \"%7f\",\r\n            \"block_sql_injection\": false,\r\n            \"block_os_command_injection\": true,\r\n            \"block_directory_traversal\": false,\r\n            \"block_cross_site_scripting\": false,\r\n            \"block_remote_file_inclusion\": false,\r\n            \"block_sql_injection_strict\": false,\r\n            \"block_os_command_injection_strict\": false,\r\n            \"block_directory_traversal_strict\": false,\r\n            \"block_cross_site_scripting_strict\": false,\r\n            \"block_remote_file_inclusion_strict\": false,\r\n            \"block_ldap_injection\": false,\r\n            \"block_python_php_attacks\": false,\r\n            \"block_http_specific_injection\": false,\r\n            \"block_apache_struts_attacks\": false,\r\n            \"block_apache_struts_attacks_strict\": false,\r\n            \"comments\": null,\r\n            \"exception_patterns\": [\"misc-commands-injections\"],\r\n            \"custom_blocked_attack_type_groups\": []\r\n        },\r\n        {\r\n            \"enabled\": true,\r\n            \"active\": true,\r\n            \"name\": \"referer-header-adr\",\r\n            \"header_name\": \"Referer\",\r\n            \"max_header_value_length\": 1024,\r\n            \"denied_metacharacters\": \"%00%01%04%1b%08%5c%7f\",\r\n            \"block_sql_injection\": false,\r\n            \"block_os_command_injection\": false,\r\n            \"block_directory_traversal\": false,\r\n            \"block_cross_site_scripting\": false,\r\n            \"block_remote_file_inclusion\": false,\r\n            \"block_sql_injection_strict\": false,\r\n            \"block_os_command_injection_strict\": false,\r\n            \"block_directory_traversal_strict\": false,\r\n            \"block_cross_site_scripting_strict\": false,\r\n            \"block_remote_file_inclusion_strict\": false,\r\n            \"block_ldap_injection\": false,\r\n            \"block_python_php_attacks\": false,\r\n            \"block_http_specific_injection\": false,\r\n            \"block_apache_struts_attacks\": false,\r\n            \"block_apache_struts_attacks_strict\": false,\r\n            \"comments\": null,\r\n            \"exception_patterns\": [],\r\n            \"custom_blocked_attack_type_groups\": []\r\n        },\r\n        {\r\n            \"enabled\": true,\r\n            \"active\": true,\r\n            \"name\": \"spring4shell_protection\",\r\n            \"header_name\": \"spring.cloud.function.routing-expression\",\r\n            \"max_header_value_length\": null,\r\n            \"denied_metacharacters\": \"%7f\",\r\n            \"block_sql_injection\": false,\r\n            \"block_os_command_injection\": true,\r\n            \"block_directory_traversal\": false,\r\n            \"block_cross_site_scripting\": false,\r\n            \"block_remote_file_inclusion\": false,\r\n            \"block_sql_injection_strict\": false,\r\n            \"block_os_command_injection_strict\": false,\r\n            \"block_directory_traversal_strict\": false,\r\n            \"block_cross_site_scripting_strict\": false,\r\n            \"block_remote_file_inclusion_strict\": false,\r\n            \"block_ldap_injection\": false,\r\n            \"block_python_php_attacks\": false,\r\n            \"block_http_specific_injection\": false,\r\n            \"block_apache_struts_attacks\": false,\r\n            \"block_apache_struts_attacks_strict\": false,\r\n            \"comments\": null,\r\n            \"exception_patterns\": [],\r\n            \"custom_blocked_attack_type_groups\": []\r\n        }\r\n    ],\r\n    \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/headers_allow_deny/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"headers_allow_deny",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Header Allow/Deny",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"enabled\": true,\r\n            \"active\": true,\r\n            \"name\": \"log4j_all_header_protection\",\r\n            \"header_name\": \"*\",\r\n            \"max_header_value_length\": null,\r\n            \"denied_metacharacters\": \"%7f\",\r\n            \"block_sql_injection\": false,\r\n            \"block_os_command_injection\": true,\r\n            \"block_directory_traversal\": false,\r\n            \"block_cross_site_scripting\": false,\r\n            \"block_remote_file_inclusion\": false,\r\n            \"block_sql_injection_strict\": false,\r\n            \"block_os_command_injection_strict\": false,\r\n            \"block_directory_traversal_strict\": false,\r\n            \"block_cross_site_scripting_strict\": false,\r\n            \"block_remote_file_inclusion_strict\": false,\r\n            \"block_ldap_injection\": false,\r\n            \"block_python_php_attacks\": false,\r\n            \"block_http_specific_injection\": false,\r\n            \"block_apache_struts_attacks\": false,\r\n            \"block_apache_struts_attacks_strict\": false,\r\n            \"comments\": null,\r\n            \"exception_patterns\": [],\r\n            \"custom_blocked_attack_type_groups\": []\r\n        },\r\n        {\r\n            \"enabled\": true,\r\n            \"active\": true,\r\n            \"name\": \"log4j_cookie_protection\",\r\n            \"header_name\": \"cookie\",\r\n            \"max_header_value_length\": null,\r\n            \"denied_metacharacters\": \"%7f\",\r\n            \"block_sql_injection\": false,\r\n            \"block_os_command_injection\": true,\r\n            \"block_directory_traversal\": false,\r\n            \"block_cross_site_scripting\": false,\r\n            \"block_remote_file_inclusion\": false,\r\n            \"block_sql_injection_strict\": false,\r\n            \"block_os_command_injection_strict\": false,\r\n            \"block_directory_traversal_strict\": false,\r\n            \"block_cross_site_scripting_strict\": false,\r\n            \"block_remote_file_inclusion_strict\": false,\r\n            \"block_ldap_injection\": false,\r\n            \"block_python_php_attacks\": false,\r\n            \"block_http_specific_injection\": false,\r\n            \"block_apache_struts_attacks\": false,\r\n            \"block_apache_struts_attacks_strict\": false,\r\n            \"comments\": null,\r\n            \"exception_patterns\": [\"misc-commands-injections\"],\r\n            \"custom_blocked_attack_type_groups\": []\r\n        },\r\n        {\r\n            \"enabled\": true,\r\n            \"active\": true,\r\n            \"name\": \"referer-header-adr\",\r\n            \"header_name\": \"Referer\",\r\n            \"max_header_value_length\": 1024,\r\n            \"denied_metacharacters\": \"%00%01%04%1b%08%5c%7f\",\r\n            \"block_sql_injection\": false,\r\n            \"block_os_command_injection\": false,\r\n            \"block_directory_traversal\": false,\r\n            \"block_cross_site_scripting\": false,\r\n            \"block_remote_file_inclusion\": false,\r\n            \"block_sql_injection_strict\": false,\r\n            \"block_os_command_injection_strict\": false,\r\n            \"block_directory_traversal_strict\": false,\r\n            \"block_cross_site_scripting_strict\": false,\r\n            \"block_remote_file_inclusion_strict\": false,\r\n            \"block_ldap_injection\": false,\r\n            \"block_python_php_attacks\": false,\r\n            \"block_http_specific_injection\": false,\r\n            \"block_apache_struts_attacks\": false,\r\n            \"block_apache_struts_attacks_strict\": false,\r\n            \"comments\": null,\r\n            \"exception_patterns\": [],\r\n            \"custom_blocked_attack_type_groups\": []\r\n        },\r\n        {\r\n            \"enabled\": true,\r\n            \"active\": true,\r\n            \"name\": \"spring4shell_protection\",\r\n            \"header_name\": \"spring.cloud.function.routing-expression\",\r\n            \"max_header_value_length\": null,\r\n            \"denied_metacharacters\": \"%7f\",\r\n            \"block_sql_injection\": false,\r\n            \"block_os_command_injection\": true,\r\n            \"block_directory_traversal\": false,\r\n            \"block_cross_site_scripting\": false,\r\n            \"block_remote_file_inclusion\": false,\r\n            \"block_sql_injection_strict\": false,\r\n            \"block_os_command_injection_strict\": false,\r\n            \"block_directory_traversal_strict\": false,\r\n            \"block_cross_site_scripting_strict\": false,\r\n            \"block_remote_file_inclusion_strict\": false,\r\n            \"block_ldap_injection\": false,\r\n            \"block_python_php_attacks\": false,\r\n            \"block_http_specific_injection\": false,\r\n            \"block_apache_struts_attacks\": false,\r\n            \"block_apache_struts_attacks_strict\": false,\r\n            \"comments\": null,\r\n            \"exception_patterns\": [],\r\n            \"custom_blocked_attack_type_groups\": []\r\n        }\r\n    ],\r\n    \"enabled\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/headers_allow_deny/",
 							"protocol": "https",
@@ -2224,6 +2619,49 @@
 									"key": "dateRange%5BquickRange%5D",
 									"value": "r_7d"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Logs Servers",
+			"item": [
+				{
+					"name": "Log Servers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/log_servers/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"log_servers",
+								""
 							]
 						}
 					},
@@ -2865,6 +3303,126 @@
 									"key": "action",
 									"value": "stop"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Snapshots",
+			"item": [
+				{
+					"name": "Snapshots",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/snapshots/?page=1&itemsPerPage=10&type=all",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"snapshots",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Snapshots",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"string\",\r\n  \"type\": \"manual\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/snapshots/?page=1&itemsPerPage=10&type=all",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"snapshots",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "itemsPerPage",
+									"value": "10"
+								},
+								{
+									"key": "type",
+									"value": "all"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Snapshots {ID}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/snapshots/42632843ad7a1d8df79d11018b99ea580a7e7335",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"snapshots",
+								"42632843ad7a1d8df79d11018b99ea580a7e7335"
 							]
 						}
 					},
@@ -3785,56 +4343,20 @@
 			]
 		},
 		{
-			"name": "Snapshots",
+			"name": "XML Protection",
+			"item": []
+		},
+		{
+			"name": "Troubleshooting Tools",
 			"item": [
 				{
-					"name": "Snapshots",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/snapshots/?page=1&itemsPerPage=10&type=all",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"snapshots",
-								""
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "1"
-								},
-								{
-									"key": "itemsPerPage",
-									"value": "10"
-								},
-								{
-									"key": "type",
-									"value": "all"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Snapshots",
+					"name": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/troubleshooting/",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"string\",\r\n  \"type\": \"manual\"\r\n}",
+							"raw": "{\r\n  \"upload_one_star_files\": false,\r\n  \"upload_rpc_and_cm_logs\": true,\r\n  \"upload_session_recording\": false,\r\n  \"capture_packet\": {\r\n    \"take_capture\": false,\r\n    \"dest_ip_addr\": \"\",\r\n    \"dest_port\": 80,\r\n    \"duration\": 30\r\n  },\r\n  \"wget_url\": \"https://www.some-example.com/index.html\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3842,7 +4364,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/snapshots/?page=1&itemsPerPage=10&type=all",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/troubleshooting/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -3855,32 +4377,14 @@
 								"waasapi",
 								"applications",
 								"{{appName}}",
-								"snapshots",
+								"troubleshooting",
 								""
-							],
-							"query": [
-								{
-									"key": "page",
-									"value": "1"
-								},
-								{
-									"key": "itemsPerPage",
-									"value": "10"
-								},
-								{
-									"key": "type",
-									"value": "all"
-								}
 							]
 						}
 					},
 					"response": []
 				}
 			]
-		},
-		{
-			"name": "XML Protection",
-			"item": []
 		}
 	],
 	"auth": {
@@ -3916,7 +4420,7 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "www.example.com",
+			"value": "www.darklab.co",
 			"type": "string"
 		},
 		{
@@ -3928,8 +4432,9 @@
 			"value": "test"
 		},
 		{
-			"key": "app_group_name",
-			"value": "Production"
+			"key": "app_groups_name",
+			"value": "test",
+			"type": "string"
 		}
 	]
 }
