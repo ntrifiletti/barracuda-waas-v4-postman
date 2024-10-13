@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "8dbf02ad-9646-4484-ab29-ccbbde9b376f",
 		"name": "Barracuda Networks | WaaS API v4",
+		"description": "[https://api.waas.barracudanetworks.com/v4/swagger/#/](https://api.waas.barracudanetworks.com/v4/swagger/#/)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+
 	},
 	"item": [
 		{
@@ -18,6 +19,7 @@
 							"protocol": "https",
 							"host": [
 								"api",
+								
 								"waas",
 								"barracudanetworks",
 								"com"
@@ -184,6 +186,36 @@
 								"endpoints",
 								""
 							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | AppGroup Container Image Version",
+			"item": [
+				{
+					"name": "AppGroup Container Image Version",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "AppGroup Container Image Version Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"container_image_version\": \"engwaacrepo.azurecr.io/production/cm:12.2.1.001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						}
 					},
 					"response": []
@@ -473,15 +505,186 @@
 			]
 		},
 		{
-			"name": "App Group | Datapath Options",
+			"name": "App Group | Attack Types",
 			"item": [
 				{
-					"name": "Datapath Options",
+					"name": "Attack Types Groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/datapath_options/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/groups/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"attack_types",
+								"groups",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack Types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"attack_types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack Types Group Patterns",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/{{groupName}}/patterns/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"attack_types",
+								"{{groupName}}",
+								"patterns",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Attack Types Group Patterns",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/{{groupName}}/patterns/{{patternName}}/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"attack_types",
+								"{{groupName}}",
+								"patterns",
+								"{{patternName}}",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | Custom Parameter Classes",
+			"item": [
+				{
+					"name": "Parameter Classes",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Parameter Classes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/custom_parameter_classes/classes/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -493,7 +696,66 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
+								"{{app_groups_name}}",
+								"custom_parameter_classes",
+								"classes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Parameter Classes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/custom_parameter_classes/classes/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"custom_parameter_classes",
+								"classes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | Datapath Options",
+			"item": [
+				{
+					"name": "Datapath Options",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/datapath_options/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
 								"datapath_options",
 								""
 							]
@@ -574,6 +836,142 @@
 			]
 		},
 		{
+			"name": "App Group | Internal Patterns",
+			"item": [
+				{
+					"name": "Internal Patterns",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/data_type/{{data_type}}/internal_patterns/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"data_type",
+								"{{data_type}}",
+								"internal_patterns",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal Patterns",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"appgroup_patterns\": [\r\n    {\r\n      \"pattern\": \"string\",\r\n      \"mode\": \"Passive\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/data_type/{{data_type}}/internal_patterns/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"data_type",
+								"{{data_type}}",
+								"internal_patterns",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Group | Input Types",
+			"item": [
+				{
+					"name": "Input Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/input_types/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"input_types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Input Types",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"appgroup_patterns\": [\r\n    {\r\n      \"pattern\": \"string\",\r\n      \"mode\": \"Passive\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/input_types/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"input_types",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "App Group | SOAP Validations",
 			"item": [
 				{
@@ -594,7 +992,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/soap_validations/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/soap_validations/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -606,7 +1004,7 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
+								"{{app_groups_name}}",
 								"soap_validations",
 								""
 							]
@@ -629,7 +1027,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/soap_validations/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/soap_validations/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -641,7 +1039,7 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
+								"{{app_groups_name}}",
 								"soap_validations",
 								""
 							]
@@ -664,7 +1062,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/soap_validations/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/soap_validations/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -676,7 +1074,7 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
+								"{{app_groups_name}}",
 								"soap_validations",
 								""
 							]
@@ -707,7 +1105,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/xml_validation",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -719,7 +1117,7 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
+								"{{app_groups_name}}",
 								"xml_validation"
 							]
 						}
@@ -741,7 +1139,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/xml_validation",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -753,7 +1151,7 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
+								"{{app_groups_name}}",
 								"xml_validation"
 							]
 						}
@@ -775,7 +1173,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_group_name}}/xml_validation",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/xml_validation",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -787,7 +1185,7 @@
 								"v4",
 								"waasapi",
 								"app_groups",
-								"{{app_group_name}}",
+								"{{app_groups_name}}",
 								"xml_validation"
 							]
 						}
@@ -968,27 +1366,15 @@
 			]
 		},
 		{
-			"name": "Attack Types",
+			"name": "Advanced Threat Protection",
 			"item": [
 				{
-					"name": "Attack Types Groups",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
+					"name": "Advanced Threat Protection",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/groups/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/advanced_threat_protection/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -1001,127 +1387,7 @@
 								"waasapi",
 								"applications",
 								"{{appName}}",
-								"attack_types",
-								"groups",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Attack Types",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"attack_types",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Attack Types Group Patterns",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/{{groupName}}/patterns/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"attack_types",
-								"{{groupName}}",
-								"patterns",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Attack Types Group Patterns",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"groups\": [\r\n        {\r\n            \"patterns\": [\r\n                {\r\n                    \"name\": \"stringy\",\r\n                    \"mode\": \"Active\",\r\n                    \"regex\": \"stringy\",\r\n                    \"algorithm\": \"None\",\r\n                    \"case_sensitive\": true,\r\n                    \"description\": \"need more string\"\r\n                }\r\n            ],\r\n            \"name\": \"stringtest\"\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/attack_types/{{groupName}}/patterns/{{patternName}}/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"attack_types",
-								"{{groupName}}",
-								"patterns",
-								"{{patternName}}",
+								"advanced_threat_protection",
 								""
 							]
 						}
@@ -3239,6 +3505,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Server Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers/{{serverName}}/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"servers",
+								"{{serverName}}",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -3652,7 +3945,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/trusted_hosts/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/trusted_hosts/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -3664,8 +3957,51 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"dvwa.darklab.co",
+								"{{appName}}",
 								"trusted_hosts",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Traffic Rules",
+			"item": [
+				{
+					"name": "Traffic Rules",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/traffic_rules/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"traffic_rules",
 								""
 							]
 						}
@@ -4420,7 +4756,8 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "www.darklab.co",
+			"value": "www.api.com",
+			
 			"type": "string"
 		},
 		{
@@ -4435,6 +4772,16 @@
 			"key": "app_groups_name",
 			"value": "test",
 			"type": "string"
+		},
+		{
+			"key": "data_type",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "serverName",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
