@@ -19,7 +19,6 @@
 							"protocol": "https",
 							"host": [
 								"api",
-								
 								"waas",
 								"barracudanetworks",
 								"com"
@@ -674,7 +673,26 @@
 					"name": "Parameter Classes",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/custom_parameter_classes/classes/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"app_groups",
+								"{{app_groups_name}}",
+								"custom_parameter_classes",
+								"classes",
+								""
+							]
+						}
 					},
 					"response": []
 				},
@@ -683,6 +701,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/app_groups/{{app_groups_name}}/custom_parameter_classes/classes/",
 							"protocol": "https",
@@ -2336,6 +2363,68 @@
 			]
 		},
 		{
+			"name": "Extra Data",
+			"item": [
+				{
+					"name": "Extra Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/extra_data/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"extra_data",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Form Spam",
+			"item": [
+				{
+					"name": "Form Spam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/form_spam/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"form_spam",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Header Allow/Deny",
 			"item": [
 				{
@@ -2416,84 +2505,6 @@
 		{
 			"name": "Import and Export",
 			"item": [
-				{
-					"name": "Export",
-					"item": [
-						{
-							"name": "Export",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/compliance/?include_servers=true&include_endpoints=true",
-									"protocol": "https",
-									"host": [
-										"api",
-										"waas",
-										"barracudanetworks",
-										"com"
-									],
-									"path": [
-										"v4",
-										"waasapi",
-										"applications",
-										"{{appName}}",
-										"export",
-										"compliance",
-										""
-									],
-									"query": [
-										{
-											"key": "include_servers",
-											"value": "true"
-										},
-										{
-											"key": "include_endpoints",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Export App Config",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/?include_servers=true&include_endpoints=true",
-									"protocol": "https",
-									"host": [
-										"api",
-										"waas",
-										"barracudanetworks",
-										"com"
-									],
-									"path": [
-										"v4",
-										"waasapi",
-										"applications",
-										"{{appName}}",
-										"export",
-										""
-									],
-									"query": [
-										{
-											"key": "include_servers",
-											"value": "true"
-										},
-										{
-											"key": "include_endpoints",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
 				{
 					"name": "Import",
 					"item": [
@@ -2581,6 +2592,84 @@
 										{
 											"key": "include_endpoints",
 											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Export",
+					"item": [
+						{
+							"name": "Export",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/compliance/?include_servers=true&include_endpoints=true",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"export",
+										"compliance",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "true"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export App Config",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/export/?include_servers=true&include_endpoints=true",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"export",
+										""
+									],
+									"query": [
+										{
+											"key": "include_servers",
+											"value": "true"
+										},
+										{
+											"key": "include_endpoints",
+											"value": "true"
 										}
 									]
 								}
@@ -2993,6 +3082,68 @@
 								"applications",
 								"{{appName}}",
 								"parameter_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Referer Spam",
+			"item": [
+				{
+					"name": "Referer Spam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/referer_spam/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"referer_spam",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rate Control Pools",
+			"item": [
+				{
+					"name": "Rate Control",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/rate_control/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"rate_control",
 								""
 							]
 						}
@@ -3604,6 +3755,37 @@
 			]
 		},
 		{
+			"name": "Slow Client Prevention",
+			"item": [
+				{
+					"name": "Slow Client Prevention",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/slow_client_prevention/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"slow_client_prevention",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Snapshots",
 			"item": [
 				{
@@ -3890,6 +4072,111 @@
 			]
 		},
 		{
+			"name": "Tarpit Profile",
+			"item": [
+				{
+					"name": "Tarpit Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/tarpit_profile/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"tarpit_profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Traffic Rules",
+			"item": [
+				{
+					"name": "Traffic Rules",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/traffic_rules/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"traffic_rules",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trusted CA",
+			"item": [
+				{
+					"name": "Trusted CA",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/trusted-ca/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"trusted-ca",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Trusted Hosts",
 			"item": [
 				{
@@ -3959,49 +4246,6 @@
 								"applications",
 								"{{appName}}",
 								"trusted_hosts",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Traffic Rules",
-			"item": [
-				{
-					"name": "Traffic Rules",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/traffic_rules/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"traffic_rules",
 								""
 							]
 						}
@@ -4680,7 +4924,34 @@
 		},
 		{
 			"name": "XML Protection",
-			"item": []
+			"item": [
+				{
+					"name": "XML Protection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/xml_protection/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"xml_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Troubleshooting Tools",
@@ -4727,8 +4998,9 @@
 		"type": "bearer",
 		"bearer": [
 			{
+
 				"key": "token",
-				"value": "Your.Bearer.Token.Here",
+				"value": "YourAPIKeyHere",
 				"type": "string"
 			}
 		]
@@ -4756,8 +5028,7 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "www.api.com",
-			
+			"value": "www.contoso.com",
 			"type": "string"
 		},
 		{
