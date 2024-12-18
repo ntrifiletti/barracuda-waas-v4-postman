@@ -3,7 +3,6 @@
 		"name": "Barracuda Networks | WaaS API v4",
 		"description": "[https://api.waas.barracudanetworks.com/v4/swagger/#/](https://api.waas.barracudanetworks.com/v4/swagger/#/)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-
 	},
 	"item": [
 		{
@@ -198,7 +197,10 @@
 					"name": "AppGroup Container Image Version",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": ""
+						}
 					},
 					"response": []
 				},
@@ -215,6 +217,9 @@
 									"language": "json"
 								}
 							}
+						},
+						"url": {
+							"raw": ""
 						}
 					},
 					"response": []
@@ -1994,6 +1999,156 @@
 			"name": "Client Evaluation",
 			"item": [
 				{
+					"name": "Suspicious Only",
+					"item": [
+						{
+							"name": "Client Evaluation - OFF",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": false,\r\n            \"enforce_captcha\": \"suspicious_clients_only\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"hCAPTCHA\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"\",\r\n    \"captcha_site_key\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/client_evaluation/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"client_evaluation",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Client Evaluation - ON",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": true,\r\n            \"enforce_captcha\": \"suspicious_clients_only\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"hCAPTCHA\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"\",\r\n    \"captcha_site_key\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/client_evaluation/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"client_evaluation",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "All Clients",
+					"item": [
+						{
+							"name": "Client Evaluation ON",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": true,\r\n            \"enforce_captcha\": \"all_clients\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/submitform-*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"hCAPTCHA\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"\",\r\n    \"captcha_site_key\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/client_evaluation/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"client_evaluation",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Client Evaluation OFF",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": false,\r\n            \"enforce_captcha\": \"all_clients\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/submitform-*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"hCAPTCHA\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"\",\r\n    \"captcha_site_key\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/client_evaluation/",
+									"protocol": "https",
+									"host": [
+										"api",
+										"waas",
+										"barracudanetworks",
+										"com"
+									],
+									"path": [
+										"v4",
+										"waasapi",
+										"applications",
+										"{{appName}}",
+										"client_evaluation",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Client Evaluation",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2011,7 +2166,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/client_evaluation/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/client_evaluation/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -2023,77 +2178,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"dvwa.darklab.co",
-								"client_evaluation",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Client Evaluation",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": true,\r\n            \"enforce_captcha\": \"suspicious_clients_only\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"reCAPTCHA v3\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"6Lf30eYoAAAAADopggFu7q74W-4LJ0pijlV2eLL5\",\r\n    \"captcha_site_key\": \"6Lf30eYoAAAAAAKCVW3tXPep5WyrRJY2efBbeHDh\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/client_evaluation/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"dvwa.darklab.co",
-								"client_evaluation",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Client Evaluation",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": true,\r\n            \"enforce_captcha\": \"suspicious_clients_only\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"reCAPTCHA v3\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"6Lf30eYoAAAAADopggFu7q74W-4LJ0pijlV2eLL5\",\r\n    \"captcha_site_key\": \"6Lf30eYoAAAAAAKCVW3tXPep5WyrRJY2efBbeHDh\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/client_evaluation/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"dvwa.darklab.co",
+								"{{appName}}",
 								"client_evaluation",
 								""
 							]
@@ -2126,6 +2211,65 @@
 								"applications",
 								"{{appName}}",
 								"clickjacking_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DDOS",
+			"item": [
+				{
+					"name": "DDOS Allowlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/ddos/allow_list/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"ddos",
+								"allow_list",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DDOS Blocklist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/ddos/block_list/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"ddos",
+								"block_list",
 								""
 							]
 						}
@@ -3149,6 +3293,33 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Rate Control Pools",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/rate_control/pools/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"rate_control",
+								"pools",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -3636,6 +3807,41 @@
 					"request": {
 						"method": "GET",
 						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"servers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servers",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Default\",\r\n        \"protocol\": \"HTTP\",\r\n        \"host\": \"juice.centralus.azurecontainer.io\",\r\n        \"port\": 3000,\r\n        \"weight\": 1,\r\n        \"is_backup\": false,\r\n        \"mode\": \"In Service\",\r\n        \"health\": \"Up\",\r\n        \"source_ip_to_connect\": \"52.154.207.105\",\r\n        \"client_impersonation\": true,\r\n        \"enable_container_secret\": false,\r\n        \"testing_backend_connectivity\": false,\r\n        \"backend_test_result\": {\r\n            \"device_result\": {\r\n                \"0253cf6a-520e-45c2-b31f-114388ee7235\": {\r\n                    \"ip\": \"20.12.130.255\",\r\n                    \"port\": 3000,\r\n                    \"tcp_test_result\": {\r\n                        \"status\": \"pass\",\r\n                        \"details\": \"Successfully connected to the server\"\r\n                    },\r\n                    \"application_test_result\": {\r\n                        \"status\": \"pass\",\r\n                        \"details\": \"Application layer test passed\"\r\n                    }\r\n                },\r\n                \"4aa806b8-f1f8-4c61-a2de-2b53480d45f3\": {\r\n                    \"ip\": \"20.12.130.255\",\r\n                    \"port\": 3000,\r\n                    \"tcp_test_result\": {\r\n                        \"status\": \"pass\",\r\n                        \"details\": \"Successfully connected to the server\"\r\n                    },\r\n                    \"application_test_result\": {\r\n                        \"status\": \"pass\",\r\n                        \"details\": \"Application layer test passed\"\r\n                    }\r\n                },\r\n                \"75020da7-cab6-4832-a54e-874320b77f84\": {\r\n                    \"ip\": \"20.12.130.255\",\r\n                    \"port\": 3000,\r\n                    \"tcp_test_result\": {\r\n                        \"status\": \"pass\",\r\n                        \"details\": \"Successfully connected to the server\"\r\n                    },\r\n                    \"application_test_result\": {\r\n                        \"status\": \"pass\",\r\n                        \"details\": \"Application layer test passed\"\r\n                    }\r\n                },\r\n                \"976b5fb4-a589-4c43-af3f-74d529c41763\": {\r\n                    \"ip\": \"20.12.130.255\",\r\n                    \"port\": 3000,\r\n                    \"tcp_test_result\": {\r\n                        \"status\": \"pass\",\r\n                        \"details\": \"Successfully connected to the server\"\r\n                    },\r\n                    \"application_test_result\": {\r\n                        \"status\": \"pass\",\r\n                        \"details\": \"Application layer test passed\"\r\n                    }\r\n                }\r\n            },\r\n            \"overall_test_result\": {\r\n                \"overall_tcp_pass\": true,\r\n                \"overall_application_pass\": true\r\n            }\r\n        },\r\n        \"viewed_backend_result\": true,\r\n        \"last_test_time\": \"2024-04-10T23:08:47.123214Z\",\r\n        \"ssl\": {\r\n            \"protocol_ssl_3_0_enabled\": false,\r\n            \"protocol_tls_1_0_enabled\": false,\r\n            \"protocol_tls_1_1_enabled\": true,\r\n            \"protocol_tls_1_2_enabled\": true,\r\n            \"protocol_tls_1_3_enabled\": true,\r\n            \"validate_ssl_certificate\": false,\r\n            \"ssl_compatibility_mode\": false,\r\n            \"enable_http2\": false,\r\n            \"enable_sni\": false,\r\n            \"ssl_certificate\": null,\r\n            \"ssl_private_key\": null,\r\n            \"aes_key_encrypted\": null,\r\n            \"ssl_private_key_customer_container\": null,\r\n            \"aes_key_customer_container\": null\r\n        },\r\n        \"health_checks\": {\r\n            \"inband_max_http_errors\": 0,\r\n            \"inband_max_refused\": 10,\r\n            \"inband_max_timeout_failures\": 10,\r\n            \"inband_max_other_failures\": 10,\r\n            \"enable_oob_health_checks\": true,\r\n            \"oob_health_check_interval\": 10,\r\n            \"healthcheck_http_request_url\": \"/\",\r\n            \"healthcheck_method\": \"GET\",\r\n            \"healthcheck_additional_headers\": \"\",\r\n            \"healthcheck_status_code\": 200,\r\n            \"healthcheck_match_content_string\": \"\",\r\n            \"healthcheck_domain\": \"\"\r\n        },\r\n        \"advanced\": {\r\n            \"advanced_timing_max_connections\": 10000,\r\n            \"advanced_timing_max_requests\": 1000,\r\n            \"advanced_timing_max_keeipalive_requests\": 0,\r\n            \"advanced_timing_max_establishing_connections\": 100,\r\n            \"advanced_timing_max_spare_connections\": 0,\r\n            \"advanced_timing_timeout\": 300000,\r\n            \"connection_pooling\": false,\r\n            \"connection_pooling_keepalive_timeout\": 900000\r\n        }\r\n    },\r\n    {\r\n        \"name\": \"webgoat-origin\",\r\n        \"protocol\": \"HTTP\",\r\n        \"host\": \"wgoat-azure.a2dzeebtftbfcfcc.centralus.azurecontainer.io\",\r\n        \"port\": 8080,\r\n        \"weight\": 1,\r\n        \"is_backup\": false,\r\n        \"mode\": \"In Service\",\r\n        \"health\": \"Up\",\r\n        \"source_ip_to_connect\": \"\",\r\n        \"client_impersonation\": false,\r\n        \"enable_container_secret\": false,\r\n        \"testing_backend_connectivity\": false,\r\n        \"backend_test_result\": {},\r\n        \"viewed_backend_result\": true,\r\n        \"last_test_time\": \"2023-08-29T14:11:52.919840Z\",\r\n        \"ssl\": {\r\n            \"protocol_ssl_3_0_enabled\": false,\r\n            \"protocol_tls_1_0_enabled\": false,\r\n            \"protocol_tls_1_1_enabled\": true,\r\n            \"protocol_tls_1_2_enabled\": true,\r\n            \"protocol_tls_1_3_enabled\": true,\r\n            \"validate_ssl_certificate\": false,\r\n            \"ssl_compatibility_mode\": false,\r\n            \"enable_http2\": false,\r\n            \"enable_sni\": false,\r\n            \"ssl_certificate\": null,\r\n            \"ssl_private_key\": null,\r\n            \"aes_key_encrypted\": null,\r\n            \"ssl_private_key_customer_container\": null,\r\n            \"aes_key_customer_container\": null\r\n        },\r\n        \"health_checks\": {\r\n            \"inband_max_http_errors\": 0,\r\n            \"inband_max_refused\": 10,\r\n            \"inband_max_timeout_failures\": 10,\r\n            \"inband_max_other_failures\": 10,\r\n            \"enable_oob_health_checks\": false,\r\n            \"oob_health_check_interval\": 10,\r\n            \"healthcheck_http_request_url\": \"/\",\r\n            \"healthcheck_method\": \"GET\",\r\n            \"healthcheck_additional_headers\": \"\",\r\n            \"healthcheck_status_code\": 200,\r\n            \"healthcheck_match_content_string\": \"\",\r\n            \"healthcheck_domain\": \"\"\r\n        },\r\n        \"advanced\": {\r\n            \"advanced_timing_max_connections\": 10000,\r\n            \"advanced_timing_max_requests\": 1000,\r\n            \"advanced_timing_max_keeipalive_requests\": 0,\r\n            \"advanced_timing_max_establishing_connections\": 100,\r\n            \"advanced_timing_max_spare_connections\": 0,\r\n            \"advanced_timing_timeout\": 300000,\r\n            \"connection_pooling\": false,\r\n            \"connection_pooling_keepalive_timeout\": 900000\r\n        }\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/servers/",
 							"protocol": "https",
@@ -4197,7 +4403,7 @@
 							}
 						},
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/dvwa.darklab.co/trusted_hosts/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/trusted_hosts/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -4209,7 +4415,7 @@
 								"v4",
 								"waasapi",
 								"applications",
-								"dvwa.darklab.co",
+								"{{appName}}",
 								"trusted_hosts",
 								""
 							]
@@ -4998,9 +5204,8 @@
 		"type": "bearer",
 		"bearer": [
 			{
-
 				"key": "token",
-				"value": "YourAPIKeyHere",
+				"value": "YourBearerTokenHere",
 				"type": "string"
 			}
 		]
@@ -5028,7 +5233,7 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "www.contoso.com",
+			"value": "www.darklab.co",
 			"type": "string"
 		},
 		{
