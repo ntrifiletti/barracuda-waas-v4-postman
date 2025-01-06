@@ -1913,89 +1913,6 @@
 			]
 		},
 		{
-			"name": "Cookie Security",
-			"item": [
-				{
-					"name": "Cookie Security",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"cookie_security",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Cookie Security",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"cookie_security",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Cookie Security",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
-							"protocol": "https",
-							"host": [
-								"api",
-								"waas",
-								"barracudanetworks",
-								"com"
-							],
-							"path": [
-								"v4",
-								"waasapi",
-								"applications",
-								"{{appName}}",
-								"cookie_security",
-								""
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
 			"name": "Client Evaluation",
 			"item": [
 				{
@@ -2220,6 +2137,259 @@
 			]
 		},
 		{
+			"name": "Comment Spam",
+			"item": [
+				{
+					"name": "Comment Spam",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/comment_spam/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"comment_spam",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Spam",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"block_comment_spam\": true,\r\n    \"parameter\": [],\r\n    \"exception_patterns\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/comment_spam/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"comment_spam",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment Spam",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"block_comment_spam\": true,\r\n    \"parameter\": [],\r\n    \"exception_patterns\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/comment_spam/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"comment_spam",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cookie Security",
+			"item": [
+				{
+					"name": "Cookie Security",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cookie_security",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cookie Security",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cookie_security",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cookie Security",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/cookie_security/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"cookie_security",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Theft Protection",
+			"item": [
+				{
+					"name": "Data Theft Protection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/data_theft_protection/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"data_theft_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Data Theft Protection",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/data_theft_protection/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"data_theft_protection",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "DDOS",
 			"item": [
 				{
@@ -2287,7 +2457,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/dns_zones/",
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/dns_zones/",
 							"protocol": "https",
 							"host": [
 								"api",
@@ -2298,10 +2468,33 @@
 							"path": [
 								"v4",
 								"waasapi",
-								"applications",
-								"{{appName}}",
 								"dns_zones",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DNS Zones Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/dns_zones/cudaopsec.com/status",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"dns_zones",
+								"cudaopsec.com",
+								"status"
 							]
 						}
 					},
@@ -3262,6 +3455,41 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Referer Spam",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"referrer_spam_detection\": true,\r\n    \"exception_patterns\": [referer-spam-pattern-810]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/referer_spam/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"referer_spam",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -3412,6 +3640,68 @@
 								"applications",
 								"APIS_GW",
 								"request_rewrite",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Response Body Rewrite",
+			"item": [
+				{
+					"name": "Response Body Rewrite",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_body_rewrite/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"response_body_rewrite",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Response Cloaking",
+			"item": [
+				{
+					"name": "Response Cloaking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/response_cloaking/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"response_cloaking",
 								""
 							]
 						}
@@ -4492,6 +4782,37 @@
 			]
 		},
 		{
+			"name": "URL Encryption",
+			"item": [
+				{
+					"name": "URL Encryption",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/url_encryption/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"url_encryption",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "URL Normalization",
 			"item": [
 				{
@@ -5205,7 +5526,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "YourBearerTokenHere",
+				"value": "Your.Bearer.Token.Here",
 				"type": "string"
 			}
 		]
