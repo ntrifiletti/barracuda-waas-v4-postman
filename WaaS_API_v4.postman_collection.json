@@ -1,7 +1,6 @@
 {
 	"info": {
 		"name": "Barracuda Networks | WaaS API v4",
-		"description": "[https://api.waas.barracudanetworks.com/v4/swagger/#/](https://api.waas.barracudanetworks.com/v4/swagger/#/)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -2067,6 +2066,44 @@
 				},
 				{
 					"name": "Client Evaluation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rules\": [\r\n        {\r\n            \"name\": \"default\",\r\n            \"is_enabled\": true,\r\n            \"enforce_captcha\": \"suspicious_clients_only\",\r\n            \"num_captcha_tries\": 5,\r\n            \"num_unanswered_captcha\": 100,\r\n            \"expiry_time\": 300,\r\n            \"extended_match_sequence\": 1,\r\n            \"comments\": \"\",\r\n            \"extended_match\": \"*\",\r\n            \"url\": \"/*\",\r\n            \"host\": \"*\",\r\n            \"mouse_check\": true\r\n        }\r\n    ],\r\n    \"captcha_type\": \"reCAPTCHA v3\",\r\n    \"is_enabled\": true,\r\n    \"captcha_site_secret\": \"6Lf30eYoAAAAADopggFu7q74W-4LJ0pijlV2eLL5\",\r\n    \"captcha_site_key\": \"6Lf30eYoAAAAAAKCVW3tXPep5WyrRJY2efBbeHDh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.waas.barracudanetworks.com/v4/waasapi/applications/{{appName}}/client_evaluation/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"waas",
+								"barracudanetworks",
+								"com"
+							],
+							"path": [
+								"v4",
+								"waasapi",
+								"applications",
+								"{{appName}}",
+								"client_evaluation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Client Evaluation Copy",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -5554,7 +5591,7 @@
 	"variable": [
 		{
 			"key": "appName",
-			"value": "www.darklab.co",
+			"value": "www.example.com",
 			"type": "string"
 		},
 		{
